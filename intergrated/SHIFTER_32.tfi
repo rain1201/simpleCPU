@@ -1,0 +1,13 @@
+
+
+
+// Instantiate the module
+SHIFTER_32 instance_name (
+    .X(X), 
+    .Sa(Sa), 
+    .Arith(Arith), 
+    .Right(Right), 
+    .Sh(Sh)
+    );
+
+

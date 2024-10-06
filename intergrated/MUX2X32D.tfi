@@ -1,0 +1,12 @@
+
+
+
+// Instantiate the module
+MUX2X32D instance_name (
+    .A0(A0), 
+    .A1(A1), 
+    .S(S), 
+    .Y(Y)
+    );
+
+
