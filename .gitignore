@@ -41,7 +41,6 @@
 *_summary.xml
 *_usage.xml
 *_xst.xrpt
-*.exe
 
 # iMPACT generated files
 _impactbatch.log
@@ -66,4 +65,8 @@ xlnx_auto_0_xdb/
 xst/
 _ngo/
 _xmsgs/
+
+# isim
 isim/
+*.exe
+*.wdb
