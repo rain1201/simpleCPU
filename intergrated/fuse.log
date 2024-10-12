@@ -1,22 +1,26 @@
-Running: /opt/Xilinx/14.7/ISE_DS/ISE/bin/lin64/unwrapped/fuse -intstyle ise -incremental -lib unisims_ver -lib unimacro_ver -lib xilinxcorelib_ver -lib secureip -o /home/song/simpleCPU/intergrated/EXT16T32_test_isim_beh.exe -prj /home/song/simpleCPU/intergrated/EXT16T32_test_beh.prj work.EXT16T32_test work.glbl 
+Running: /opt/Xilinx/14.7/ISE_DS/ISE/bin/lin64/unwrapped/fuse -intstyle ise -incremental -lib unisims_ver -lib unimacro_ver -lib xilinxcorelib_ver -lib secureip -o /home/song/simpleCPU/intergrated/D_FFEC_test_isim_beh.exe -prj /home/song/simpleCPU/intergrated/D_FFEC_test_beh.prj work.D_FFEC_test work.glbl 
 ISim P.20131013 (signature 0xfbc00daa)
 Number of CPUs detected in this system: 16
 Turning on mult-threading, number of parallel sub-compilation jobs: 32 
 Determining compilation order of HDL files
-Analyzing Verilog file "/home/song/simpleCPU/intergrated/EXT16T32.v" into library work
-Analyzing Verilog file "/home/song/simpleCPU/intergrated/EXT16T32_test.v" into library work
+Analyzing Verilog file "/home/song/simpleCPU/intergrated/D_LATCH.v" into library work
+Analyzing Verilog file "/home/song/simpleCPU/intergrated/D_FF.v" into library work
+Analyzing Verilog file "/home/song/simpleCPU/intergrated/D_FFEC.v" into library work
+Analyzing Verilog file "/home/song/simpleCPU/intergrated/D_FFEC_test.v" into library work
 Analyzing Verilog file "/opt/Xilinx/14.7/ISE_DS/ISE//verilog/src/glbl.v" into library work
 Starting static elaboration
 Completed static elaboration
-Fuse Memory Usage: 82744 KB
-Fuse CPU Usage: 870 ms
-Compiling module EXT16T32
-Compiling module EXT16T32_test
+Fuse Memory Usage: 82748 KB
+Fuse CPU Usage: 900 ms
+Compiling module D_LATCH
+Compiling module D_FF
+Compiling module D_FFEC
+Compiling module D_FFEC_test
 Compiling module glbl
 Time Resolution for simulation is 1ps.
 Waiting for 1 sub-compilation(s) to finish...
-Compiled 3 Verilog Units
-Built simulation executable /home/song/simpleCPU/intergrated/EXT16T32_test_isim_beh.exe
-Fuse Memory Usage: 2215792 KB
-Fuse CPU Usage: 880 ms
-GCC CPU Usage: 140 ms
+Compiled 5 Verilog Units
+Built simulation executable /home/song/simpleCPU/intergrated/D_FFEC_test_isim_beh.exe
+Fuse Memory Usage: 2215804 KB
+Fuse CPU Usage: 930 ms
+GCC CPU Usage: 160 ms

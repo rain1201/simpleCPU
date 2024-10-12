@@ -1,1 +1,1 @@
--intstyle "ise" -incremental -lib "unisims_ver" -lib "unimacro_ver" -lib "xilinxcorelib_ver" -lib "secureip" -o "/home/song/simpleCPU/intergrated/EXT16T32_test_isim_beh.exe" -prj "/home/song/simpleCPU/intergrated/EXT16T32_test_beh.prj" "work.EXT16T32_test" "work.glbl" 
+-intstyle "ise" -incremental -lib "unisims_ver" -lib "unimacro_ver" -lib "xilinxcorelib_ver" -lib "secureip" -o "/home/song/simpleCPU/intergrated/D_FFEC_test_isim_beh.exe" -prj "/home/song/simpleCPU/intergrated/D_FFEC_test_beh.prj" "work.D_FFEC_test" "work.glbl" 
