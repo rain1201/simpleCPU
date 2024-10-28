@@ -5,5 +5,104 @@
      behavior or data corruption.  It is strongly advised that
      users do not edit the contents of this file. -->
 <messages>
+<msg type="warning" file="HDLCompiler" num="1016" delta="unknown" >"/home/song/simpleCPU/intergrated/main.v" Line 47: Port <arg fmt="%s" index="1">Z</arg> is not connected to this instance
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="1016" delta="unknown" >"/home/song/simpleCPU/intergrated/main.v" Line 48: Port <arg fmt="%s" index="1">Z</arg> is not connected to this instance
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="1016" delta="unknown" >"/home/song/simpleCPU/intergrated/REG32.v" Line 30: Port <arg fmt="%s" index="1">Qn</arg> is not connected to this instance
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="1016" delta="unknown" >"/home/song/simpleCPU/intergrated/REG32.v" Line 31: Port <arg fmt="%s" index="1">Qn</arg> is not connected to this instance
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="1016" delta="unknown" >"/home/song/simpleCPU/intergrated/REG32.v" Line 32: Port <arg fmt="%s" index="1">Qn</arg> is not connected to this instance
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="1016" delta="unknown" >"/home/song/simpleCPU/intergrated/REG32.v" Line 33: Port <arg fmt="%s" index="1">Qn</arg> is not connected to this instance
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="1016" delta="unknown" >"/home/song/simpleCPU/intergrated/REG32.v" Line 34: Port <arg fmt="%s" index="1">Qn</arg> is not connected to this instance
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="1016" delta="unknown" >"/home/song/simpleCPU/intergrated/REG32.v" Line 35: Port <arg fmt="%s" index="1">Qn</arg> is not connected to this instance
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="1016" delta="unknown" >"/home/song/simpleCPU/intergrated/REG32.v" Line 36: Port <arg fmt="%s" index="1">Qn</arg> is not connected to this instance
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="1016" delta="unknown" >"/home/song/simpleCPU/intergrated/REG32.v" Line 37: Port <arg fmt="%s" index="1">Qn</arg> is not connected to this instance
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="1016" delta="unknown" >"/home/song/simpleCPU/intergrated/REG32.v" Line 38: Port <arg fmt="%s" index="1">Qn</arg> is not connected to this instance
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="1016" delta="unknown" >"/home/song/simpleCPU/intergrated/REG32.v" Line 39: Port <arg fmt="%s" index="1">Qn</arg> is not connected to this instance
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="1016" delta="unknown" >"/home/song/simpleCPU/intergrated/REG32.v" Line 40: Port <arg fmt="%s" index="1">Qn</arg> is not connected to this instance
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="1016" delta="unknown" >"/home/song/simpleCPU/intergrated/REG32.v" Line 41: Port <arg fmt="%s" index="1">Qn</arg> is not connected to this instance
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="1016" delta="unknown" >"/home/song/simpleCPU/intergrated/REG32.v" Line 42: Port <arg fmt="%s" index="1">Qn</arg> is not connected to this instance
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="1016" delta="unknown" >"/home/song/simpleCPU/intergrated/REG32.v" Line 43: Port <arg fmt="%s" index="1">Qn</arg> is not connected to this instance
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="1016" delta="unknown" >"/home/song/simpleCPU/intergrated/REG32.v" Line 44: Port <arg fmt="%s" index="1">Qn</arg> is not connected to this instance
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="1016" delta="unknown" >"/home/song/simpleCPU/intergrated/REG32.v" Line 45: Port <arg fmt="%s" index="1">Qn</arg> is not connected to this instance
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="1016" delta="unknown" >"/home/song/simpleCPU/intergrated/REG32.v" Line 46: Port <arg fmt="%s" index="1">Qn</arg> is not connected to this instance
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="1016" delta="unknown" >"/home/song/simpleCPU/intergrated/REG32.v" Line 47: Port <arg fmt="%s" index="1">Qn</arg> is not connected to this instance
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="1016" delta="unknown" >"/home/song/simpleCPU/intergrated/REG32.v" Line 48: Port <arg fmt="%s" index="1">Qn</arg> is not connected to this instance
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="1016" delta="unknown" >"/home/song/simpleCPU/intergrated/REG32.v" Line 49: Port <arg fmt="%s" index="1">Qn</arg> is not connected to this instance
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="1016" delta="unknown" >"/home/song/simpleCPU/intergrated/REG32.v" Line 50: Port <arg fmt="%s" index="1">Qn</arg> is not connected to this instance
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="1016" delta="unknown" >"/home/song/simpleCPU/intergrated/REG32.v" Line 51: Port <arg fmt="%s" index="1">Qn</arg> is not connected to this instance
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="1016" delta="unknown" >"/home/song/simpleCPU/intergrated/REG32.v" Line 52: Port <arg fmt="%s" index="1">Qn</arg> is not connected to this instance
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="1016" delta="unknown" >"/home/song/simpleCPU/intergrated/REG32.v" Line 53: Port <arg fmt="%s" index="1">Qn</arg> is not connected to this instance
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="1016" delta="unknown" >"/home/song/simpleCPU/intergrated/REG32.v" Line 54: Port <arg fmt="%s" index="1">Qn</arg> is not connected to this instance
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="1016" delta="unknown" >"/home/song/simpleCPU/intergrated/REG32.v" Line 55: Port <arg fmt="%s" index="1">Qn</arg> is not connected to this instance
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="1016" delta="unknown" >"/home/song/simpleCPU/intergrated/REG32.v" Line 56: Port <arg fmt="%s" index="1">Qn</arg> is not connected to this instance
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="1016" delta="unknown" >"/home/song/simpleCPU/intergrated/REG32.v" Line 57: Port <arg fmt="%s" index="1">Qn</arg> is not connected to this instance
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="1016" delta="unknown" >"/home/song/simpleCPU/intergrated/REG32.v" Line 58: Port <arg fmt="%s" index="1">Qn</arg> is not connected to this instance
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="1016" delta="unknown" >"/home/song/simpleCPU/intergrated/REG32.v" Line 59: Port <arg fmt="%s" index="1">Qn</arg> is not connected to this instance
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="1016" delta="unknown" >"/home/song/simpleCPU/intergrated/REG32.v" Line 60: Port <arg fmt="%s" index="1">Qn</arg> is not connected to this instance
+</msg>
+
 </messages>
 

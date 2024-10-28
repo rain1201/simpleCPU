@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="/home/song/simpleCPU/intergrated/main_test_isim_beh.wdb" id="1" type="auto">
+         <top_modules>
+            <top_module name="glbl" />
+            <top_module name="main_test" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <WVObjectSize size="12" />
+   <wvobject fp_name="/main_test/clk" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/main_test/pcrst" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">pcrst</obj_property>
+      <obj_property name="ObjectShortName">pcrst</obj_property>
+   </wvobject>
+   <wvobject fp_name="/main_test/PERIOD" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">PERIOD[31:0]</obj_property>
+      <obj_property name="ObjectShortName">PERIOD[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/main_test/uut/pc/Address" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">Address[31:0]</obj_property>
+      <obj_property name="ObjectShortName">Address[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/main_test/uut/rf/r/Q1" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">Q1[31:0]</obj_property>
+      <obj_property name="ObjectShortName">Q1[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/main_test/uut/rf/r/Q2" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">Q2[31:0]</obj_property>
+      <obj_property name="ObjectShortName">Q2[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/main_test/uut/rf/r/Q3" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">Q3[31:0]</obj_property>
+      <obj_property name="ObjectShortName">Q3[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/main_test/uut/rf/r/Q4" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">Q4[31:0]</obj_property>
+      <obj_property name="ObjectShortName">Q4[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/main_test/uut/rf/r/Q5" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">Q5[31:0]</obj_property>
+      <obj_property name="ObjectShortName">Q5[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/main_test/uut/rf/r/Q6" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">Q6[31:0]</obj_property>
+      <obj_property name="ObjectShortName">Q6[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/main_test/uut/rf/r/Q7" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">Q7[31:0]</obj_property>
+      <obj_property name="ObjectShortName">Q7[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/main_test/uut/rf/Q8" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">Q8[31:0]</obj_property>
+      <obj_property name="ObjectShortName">Q8[31:0]</obj_property>
+   </wvobject>
+</wave_config>
