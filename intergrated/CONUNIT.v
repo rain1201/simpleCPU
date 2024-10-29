@@ -18,16 +18,16 @@
 // Additional Comments: 
 //
 //////////////////////////////////////////////////////////////////////////////////
-module CONUNIT(Op,Func,Z,Regrt,Se,Wreg,Aluqb,Aluc,Wmem,Pcsrc,Reg2reg
+module CONUNIT(Op,Func,Z,Regrt,Se,Wreg,Aluqb,Aluc,Wmem,Pcsrc,Reg2reg,Reglui
     );
 	 input [5:0]Op,Func;
 	 input Z;
-	 output Regrt,Se,Wreg,Aluqb,Wmem,Reg2reg; 
+	 output Regrt,Se,Wreg,Aluqb,Wmem,Reg2reg,Reglui; 
 	 output [1:0]Pcsrc;
 	 output [1:0]Aluc;
 	 wire[5:0] nOp,nFunc;
 	 wire nZ;
-	 wire Rtype,add,sub,andd,orr,addi,andi,ori,lw,sw,beq,bne,j,pct1,pct2;
+	 wire Rtype,add,sub,andd,orr,addi,andi,ori,lw,sw,beq,bne,lui,j,pct1,pct2;
 	 nor ir(Rtype,Op[5],Op[4],Op[3],Op[2],Op[1],Op[0]);
 	 not o0(nOp[0],Op[0]);
 	 not o1(nOp[1],Op[1]);
@@ -53,14 +53,16 @@ module CONUNIT(Op,Func,Z,Regrt,Se,Wreg,Aluqb,Aluc,Wmem,Pcsrc,Reg2reg
 	 and i4(sw,Op[5],nOp[4],Op[3],nOp[2],Op[1],Op[0]);
 	 and i5(beq,nOp[5],nOp[4],nOp[3],Op[2],nOp[1],nOp[0]);
 	 and i6(bne,nOp[5],nOp[4],nOp[3],Op[2],nOp[1],Op[0]);
+	 and i7(lui,nOp[5],nOp[4],Op[3],Op[2],Op[1],Op[0]);
 	 and ij(j,nOp[5],nOp[4],nOp[3],nOp[2],Op[1],nOp[0]);
-	 or t0(Regrt,addi,andi,ori,lw,sw,beq,bne,j);
+	 or t0(Regrt,addi,andi,ori,lw,sw,beq,bne,lui,j);
 	 or t1(Se,addi,lw,sw,beq,bne);
-	 or t2(Wreg,add,sub,andd,orr,addi,andi,ori,lw);
+	 or t2(Wreg,add,sub,andd,orr,addi,andi,ori,lw,lui);
 	 or t3(Aluqb,add,sub,andd,orr,beq,bne,j);
 	 or t4(Aluc[1],andd,orr,andi,ori);
 	 or t5(Aluc[0],sub,orr,ori,beq,bne);
 	 or t6(Reg2reg,add,sub,andd,orr,addi,andi,ori,sw,beq,bne,j);
+	 assign Reglui=lui;
 	 assign Wmem=sw;
 	 assign Pcsrc[0]=j;
 	 and p1(pct1,beq,Z);

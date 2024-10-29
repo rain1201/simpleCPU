@@ -62,7 +62,7 @@ WARNING:HDLCompiler:1016 - "/home/song/simpleCPU/intergrated/REG32.v" Line 59: P
 WARNING:HDLCompiler:1016 - "/home/song/simpleCPU/intergrated/REG32.v" Line 60: Port Qn is not connected to this instance
 Completed static elaboration
 Fuse Memory Usage: 83152 KB
-Fuse CPU Usage: 870 ms
+Fuse CPU Usage: 880 ms
 Compiling module D_LATCH
 Compiling module D_FF
 Compiling module D_FFEC
@@ -90,6 +90,6 @@ Time Resolution for simulation is 1ps.
 Waiting for 1 sub-compilation(s) to finish...
 Compiled 23 Verilog Units
 Built simulation executable /home/song/simpleCPU/intergrated/main_test_isim_beh.exe
-Fuse Memory Usage: 2216956 KB
-Fuse CPU Usage: 900 ms
-GCC CPU Usage: 50 ms
+Fuse Memory Usage: 2216964 KB
+Fuse CPU Usage: 920 ms
+GCC CPU Usage: 60 ms
