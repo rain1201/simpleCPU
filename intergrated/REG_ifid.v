@@ -3,9 +3,9 @@
 // Company: 
 // Engineer: 
 // 
-// Create Date:    19:19:19 10/24/2024 
+// Create Date:    17:26:59 11/03/2024 
 // Design Name: 
-// Module Name:    PC 
+// Module Name:    REG_ifid 
 // Project Name: 
 // Target Devices: 
 // Tool versions: 
@@ -18,10 +18,13 @@
 // Additional Comments: 
 //
 //////////////////////////////////////////////////////////////////////////////////
-module PC(Clk,Reset,En,R,Address
+module REG_ifid(D0,D1,En,Clk,Clrn,Q0,Q1,
+	 //stall,condep
     );
-	 input Clk,Reset,En;
-	 input [31:0]R; 
-	 output [31:0]Address;
-	 D_FFEC32 i(R,Clk,En,Reset,Address,);
+	 input [31:0]D0,D1;
+    input En,Clk,Clrn;
+	 //input stall,condep;
+	 output [31:0]Q0,Q1;
+	 D_FFEC32 i0(D0,Clk,En,Clrn,Q0,);
+	 D_FFEC32 i1(D1,Clk,En,Clrn,Q1,);
 endmodule

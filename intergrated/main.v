@@ -28,7 +28,7 @@ module main(clk,pcrst
 	 wire[25:0] addr;
 	 wire Regrt,Se,Wreg,Aluqb,Wmem,Reg2reg,z,Reglui; 
 	 wire [1:0]Pcsrc,Aluc;
-	 PC pc(clk,pcrst,npcnt,pcnt);
+	 PC pc(clk,pcrst,1'b1,npcnt,pcnt);
 	 INSTMEM im(pcnt,inst);
 	 assign func=inst[5:0];
 	 assign op=inst[31:26];

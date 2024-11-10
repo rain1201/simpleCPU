@@ -3,9 +3,9 @@
 // Company: 
 // Engineer: 
 // 
-// Create Date:    19:19:19 10/24/2024 
+// Create Date:    18:28:05 11/07/2024 
 // Design Name: 
-// Module Name:    PC 
+// Module Name:    D_FFEC5 
 // Project Name: 
 // Target Devices: 
 // Tool versions: 
@@ -18,10 +18,16 @@
 // Additional Comments: 
 //
 //////////////////////////////////////////////////////////////////////////////////
-module PC(Clk,Reset,En,R,Address
+module D_FFEC5(D,Clk,En,Clrn,Q,Qn
     );
-	 input Clk,Reset,En;
-	 input [31:0]R; 
-	 output [31:0]Address;
-	 D_FFEC32 i(R,Clk,En,Reset,Address,);
+	 input[4:0] D;
+	 input Clk,En,Clrn;
+	 output[4:0] Q,Qn;
+	 D_FFEC i0(D[0],Clk,En,Clrn,Q[0],Qn[0]);
+	 D_FFEC i1(D[1],Clk,En,Clrn,Q[1],Qn[1]);
+	 D_FFEC i2(D[2],Clk,En,Clrn,Q[2],Qn[2]);
+	 D_FFEC i3(D[3],Clk,En,Clrn,Q[3],Qn[3]);
+	 D_FFEC i4(D[4],Clk,En,Clrn,Q[4],Qn[4]);
+	
+
 endmodule
