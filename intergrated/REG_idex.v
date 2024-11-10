@@ -18,18 +18,18 @@
 // Additional Comments: 
 //
 //////////////////////////////////////////////////////////////////////////////////
-module REG_idex(Wreg,Reg2reg,Wmem,Op,Aluc,Aluqb,Pc,R1,R2,I,Rd,
+module REG_idex(Wreg,Reg2reg,Wmem,Op,Aluc,Aluqb,Pc,R1,R2,I,Rd,FwdA,FwdB,
 					En,Clk,Clrn,
-					eWreg,eReg2reg,eWmem,eOp,eAluc,eAluqb,ePc,eR1,eR2,eI,eRd
+					eWreg,eReg2reg,eWmem,eOp,eAluc,eAluqb,ePc,eR1,eR2,eI,eRd,eFwdA,eFwdB
     );
 	 input [5:0]Op;
-	 input Regrt,Wreg,Aluqb,Wmem,Reg2reg; 
+	 input Regrt,Wreg,Aluqb,Wmem,Reg2reg,FwdA,FwdB; 
 	 input [1:0]Aluc;
 	 input En,Clk,Clrn;
 	 input [31:0]Pc,R1,R2,I;
 	 input [4:0]Rd;
 	 output [5:0]eOp;
-	 output eRegrt,eWreg,eAluqb,eWmem,eReg2reg; 
+	 output eRegrt,eWreg,eAluqb,eWmem,eReg2reg,eFwdA,eFwdB; 
 	 output [1:0]eAluc;
 	 output [31:0]ePc,eR1,eR2,eI;
 	 output [4:0]eRd;
@@ -38,6 +38,8 @@ module REG_idex(Wreg,Reg2reg,Wmem,Op,Aluc,Aluqb,Pc,R1,R2,I,Rd,
 	 D_FFEC a2(Aluqb,Clk,En,Clrn,eAluqb);
 	 D_FFEC a3(Wmem,Clk,En,Clrn,eWmem);
 	 D_FFEC a4(Reg2reg,Clk,En,Clrn,eReg2reg);
+	 D_FFEC a5(FwdA,Clk,En,Clrn,eFwdA);
+	 D_FFEC a6(FwdB,Clk,En,Clrn,eFwdB);
 	 D_FFEC2 b(Aluc,Clk,En,Clrn,eAluc);
 	 D_FFEC5 c(Rd,Clk,En,Clrn,eRd);
  	 D_FFEC6 d(Op,Clk,En,Clrn,eOp);
