@@ -18,7 +18,7 @@
 // Additional Comments: 
 //
 //////////////////////////////////////////////////////////////////////////////////
-module REG_ifid(D0,D1,En,Clk,Clrn,Q0,Q1,
+module REG_ifid(D0,D1,En,Clk,Clrn,Q0,Q1
 	 //stall,condep
     );
 	 input [31:0]D0,D1;

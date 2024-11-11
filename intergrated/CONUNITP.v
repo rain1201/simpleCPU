@@ -19,20 +19,21 @@
 //
 //////////////////////////////////////////////////////////////////////////////////
 module CONUNITP(Op,Func,Z,Regrt,Se,Wreg,Aluqb,Aluc,Wmem,Pcsrc,Reg2reg,Reglui,
+					Rs,Rt,
 					FwdA,FwdB,
 					eReg2reg,eWreg,mWreg,mRd,eRd,eOp,
 					STALL,Condep
     );
 	 input [5:0]Op,Func,eOp;
 	 input Z;
-	 input [5:0]eOp;
 	 input eReg2reg,eWreg,mWreg;
 	 input [4:0]mRd,eRd;
+	 input [4:0]Rs,Rt;
 	 output Regrt,Se,Wreg,Aluqb,Wmem,Reg2reg,Reglui; 
 	 output [1:0]Pcsrc;
 	 output [1:0]Aluc;
-	 output [1:0]FwdA,FwdB;
-	 output STALL,Condep;
+	 output reg [1:0]FwdA,FwdB;
+	 output reg STALL,Condep;
 	 wire[5:0] nOp,nFunc;
 	 wire nZ;
 	 wire Rtype,add,sub,andd,orr,addi,andi,ori,lw,sw,beq,bne,lui,j,pct1,pct2;
@@ -76,6 +77,32 @@ module CONUNITP(Op,Func,Z,Regrt,Se,Wreg,Aluqb,Aluc,Wmem,Pcsrc,Reg2reg,Reglui,
 	 and p1(pct1,beq,Z);
 	 and p2(pct2,bne,nZ);
 	 or p(Pcsrc[1],pct1,pct2,j);
-	 
+	 always @(eRd,mRd,eWreg,mWreg,Rs,Rt,addi,andi,ori,sw,beq,bne,eReg2reg,eOp,Z)begin
+		FwdA=2'b00;
+		if((Rs==eRd)&(eWreg==1'b1)&(eRd!=5'b0))begin
+			FwdA=2'b10;
+		end else begin
+			if((Rs==mRd)&(mRd!=5'b0)&(mWreg==1'b1))begin
+				FwdA=2'b01;
+			end
+		end
+		FwdB=2'b00;
+		if((Rt==eRd)&(eWreg==1'b1)&(eRd!=5'b0)&(addi|andi|ori|sw|beq|bne))begin
+			FwdB=2'b10;
+		end else begin
+			if((Rt==mRd)&(mWreg==1'b1)&(mRd!=5'b0)&(addi|andi|ori|sw|beq|bne))begin
+				FwdB=2'b01;
+			end
+		end
+		if(((Rs==eRd)|(Rt==eRd))&(eReg2reg==1'b0)&(eRd!=0)&(eWreg==1'b1))begin
+			STALL=1'b1;
+		end else begin
+			STALL=1'b0;
+		end
+		if(((eOp==6'b000100)&(Z==1'b1))|((eOp==6'b000101)&(Z==1'b0))|(eOp==6'b000010))begin
+			Condep=1'b0;
+		end else begin
+			Condep=1'b1;
+		end
+	 end
 endmodule
-

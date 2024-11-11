@@ -20,8 +20,7 @@
 //////////////////////////////////////////////////////////////////////////////////
 module REG_memwb(Wreg,Reg2reg,D,C,Rd,
 						En,Clk,Clrn,
-						wWreg,wReg2reg,wD,wC,wRd,
-						
+						wWreg,wReg2reg,wD,wC,wRd		
     );
 	 input Wreg,Reg2reg,En,Clk,Clrn;
 	 input[31:0]D,C;
@@ -32,7 +31,7 @@ module REG_memwb(Wreg,Reg2reg,D,C,Rd,
 	 D_FFEC a0(Wreg,Clk,En,Clrn,wWreg);
 	 D_FFEC a2(Reg2reg,Clk,En,Clrn,wReg2reg);
 	 D_FFEC5 c(Rd,Clk,En,Clrn,wRd);
-	 D_FFEC32 e0(D,Clk,En,Clrn,mD);
-	 D_FFEC32 e1(C,Clk,En,Clrn,mC);
+	 D_FFEC32 e0(D,Clk,En,Clrn,wD);
+	 D_FFEC32 e1(C,Clk,En,Clrn,wC);
 
 endmodule
