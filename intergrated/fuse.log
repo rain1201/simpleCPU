@@ -132,5 +132,5 @@ Waiting for 1 sub-compilation(s) to finish...
 Compiled 30 Verilog Units
 Built simulation executable /home/song/simpleCPU/intergrated/mainP_test_isim_beh.exe
 Fuse Memory Usage: 2216984 KB
-Fuse CPU Usage: 920 ms
+Fuse CPU Usage: 900 ms
 GCC CPU Usage: 70 ms

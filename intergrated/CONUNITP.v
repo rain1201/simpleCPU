@@ -87,10 +87,10 @@ module CONUNITP(Op,Func,Z,Regrt,Se,Wreg,Aluqb,Aluc,Wmem,Pcsrc,Reg2reg,Reglui,
 			end
 		end
 		FwdB=2'b00;
-		if((Rt==eRd)&(eWreg==1'b1)&(eRd!=5'b0)&(addi|andi|ori|sw|beq|bne))begin
+		if((Rt==eRd)&(eWreg==1'b1)&(eRd!=5'b0))begin//&(addi|andi|ori|sw|beq|bne)
 			FwdB=2'b10;
 		end else begin
-			if((Rt==mRd)&(mWreg==1'b1)&(mRd!=5'b0)&(addi|andi|ori|sw|beq|bne))begin
+			if((Rt==mRd)&(mWreg==1'b1)&(mRd!=5'b0))begin//&(addi|andi|ori|sw|beq|bne)
 				FwdB=2'b01;
 			end
 		end
