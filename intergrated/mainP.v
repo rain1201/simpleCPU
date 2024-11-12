@@ -34,9 +34,9 @@ module mainP(clk,pcrst
 	 wire STALL,Condep;
 	 ALU pcalu1(fpcnt,32'b100,2'b0,npc0);
 	 MUX4X32 pcs(npc0,0,npc2,{{npc0[31:28]},addr,{2{1'b0}}},Pcsrc,npcnt);
-	 PC pc(clk,pcrst,STALL|~pcrst,npcnt,fpcnt);
+	 PC pc(clk,pcrst,(Condep&STALL)|~pcrst,npcnt,fpcnt);
 	 INSTMEM im(fpcnt,finst);
-	 REG_ifid rii(fpcnt,finst,STALL|~pcrst,clk,Condep,dpcnt,dinst);//en clk clrn
+	 REG_ifid rii(npc0,finst,STALL|~pcrst,clk,pcrst&Condep,dpcnt,dinst);//en clk clrn
 	 assign func=dinst[5:0];
 	 assign op=dinst[31:26];
 	 assign rs=dinst[25:21];
@@ -57,13 +57,14 @@ module mainP(clk,pcrst
 					STALL,Condep
 	 );
 	 MUX2X5 wrs(rd,rt,Regrt,wr);
-	 REGFILE rf(rs,rt,d,wRd,wWreg,nclk,1'b1,qa,qb);
+	 REGFILE rf(rs,rt,d,wRd,wWreg,nclk,pcrst,qa,qb);
 	 EXT16T32 ey(immediate,Se,extimme);
+	 ALU pcalu2(dpcnt,{{extimme[29:0]},{2{1'b0}}},2'b0,npc2);
 	 wire eWmem,eAluqb;
 	 wire [1:0]eAluc,eFwdA,eFwdB;
 	 wire [31:0]ePc,eR1,eR2,eI;
 	 REG_idex rie(Wreg,Reg2reg,Wmem,op,Aluc,Aluqb,dpcnt,qa,qb,extimme,wr,FwdA,FwdB,
-					1'b1,clk,(STALL&Condep)|~pcrst,
+					1'b1,clk,pcrst&Condep&STALL,
 					eWreg,eReg2reg,eWmem,eOp,eAluc,eAluqb,ePc,eR1,eR2,eI,eRd,eFwdA,eFwdB
     );
 	 wire[31:0] exx,eyy;
@@ -71,10 +72,9 @@ module mainP(clk,pcrst
 	 MUX4X32 ys(eR2,d,mR,,eFwdB,eyy);
 	 MUX2X32 aluys(eI,eyy,eAluqb,aluy);
 	 ALU malu(exx,aluy,eAluc,alur,z);
-	 ALU pcalu2(ePc,{{extimme[29:0]},{2{1'b0}}},2'b0,npc2);
 	 wire mZ;
 	 wire [31:0]mS;
-	 REG_EXMEM rem(eWreg,eReg2reg,eWmem,eOp,npc2,z,alur,qb,eRd,
+	 REG_EXMEM rem(eWreg,eReg2reg,eWmem,eOp,npc2,z,alur,eyy,eRd,
 						1'b1,clk,1'b1,
 						mWreg,mReg2reg,mWmem,mOp,mPc,mZ,mR,mS,mRd
     );

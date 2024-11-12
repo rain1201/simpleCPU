@@ -40,7 +40,7 @@ module main(clk,pcrst
 	 assign addr=inst[25:0];
 	 CONUNIT cu(op,func,z,Regrt,Se,Wreg,Aluqb,Aluc,Wmem,Pcsrc,Reg2reg,Reglui);
 	 MUX2X5 wrs(rd,rt,Regrt,wr);
-	 REGFILE rf(rs,rt,d,wr,Wreg,clk,1'b1,qa,qb);
+	 REGFILE rf(rs,rt,d,wr,Wreg,clk,pcrst,qa,qb);
 	 EXT16T32 ey(immediate,Se,extimme);
 	 MUX2X32 aluys(extimme,qb,Aluqb,aluy);
 	 ALU malu(qa,aluy,Aluc,alur,z);

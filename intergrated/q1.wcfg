@@ -32,42 +32,42 @@
    <wvobject fp_name="/main_test/uut/rf/r/Q1" type="array" db_ref_id="1">
       <obj_property name="ElementShortName">Q1[31:0]</obj_property>
       <obj_property name="ObjectShortName">Q1[31:0]</obj_property>
-      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
    </wvobject>
    <wvobject fp_name="/main_test/uut/rf/r/Q2" type="array" db_ref_id="1">
       <obj_property name="ElementShortName">Q2[31:0]</obj_property>
       <obj_property name="ObjectShortName">Q2[31:0]</obj_property>
-      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
    </wvobject>
    <wvobject fp_name="/main_test/uut/rf/r/Q3" type="array" db_ref_id="1">
       <obj_property name="ElementShortName">Q3[31:0]</obj_property>
       <obj_property name="ObjectShortName">Q3[31:0]</obj_property>
-      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
    </wvobject>
    <wvobject fp_name="/main_test/uut/rf/r/Q4" type="array" db_ref_id="1">
       <obj_property name="ElementShortName">Q4[31:0]</obj_property>
       <obj_property name="ObjectShortName">Q4[31:0]</obj_property>
-      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
    </wvobject>
    <wvobject fp_name="/main_test/uut/rf/r/Q5" type="array" db_ref_id="1">
       <obj_property name="ElementShortName">Q5[31:0]</obj_property>
       <obj_property name="ObjectShortName">Q5[31:0]</obj_property>
-      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
    </wvobject>
    <wvobject fp_name="/main_test/uut/rf/r/Q6" type="array" db_ref_id="1">
       <obj_property name="ElementShortName">Q6[31:0]</obj_property>
       <obj_property name="ObjectShortName">Q6[31:0]</obj_property>
-      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
    </wvobject>
    <wvobject fp_name="/main_test/uut/rf/r/Q7" type="array" db_ref_id="1">
       <obj_property name="ElementShortName">Q7[31:0]</obj_property>
       <obj_property name="ObjectShortName">Q7[31:0]</obj_property>
-      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
    </wvobject>
    <wvobject fp_name="/main_test/uut/rf/Q8" type="array" db_ref_id="1">
       <obj_property name="ElementShortName">Q8[31:0]</obj_property>
       <obj_property name="ObjectShortName">Q8[31:0]</obj_property>
-      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
    </wvobject>
    <wvobject fp_name="/main_test/uut/rf/Q10" type="array" db_ref_id="1">
       <obj_property name="ElementShortName">Q10[31:0]</obj_property>

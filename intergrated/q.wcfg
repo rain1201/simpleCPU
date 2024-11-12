@@ -10,7 +10,7 @@
          </top_modules>
       </db_ref>
    </db_ref_list>
-   <WVObjectSize size="19" />
+   <WVObjectSize size="20" />
    <wvobject fp_name="/mainP_test/clk" type="logic" db_ref_id="1">
       <obj_property name="ElementShortName">clk</obj_property>
       <obj_property name="ObjectShortName">clk</obj_property>
@@ -19,14 +19,14 @@
       <obj_property name="ElementShortName">pcrst</obj_property>
       <obj_property name="ObjectShortName">pcrst</obj_property>
    </wvobject>
-   <wvobject fp_name="/mainP_test/PERIOD" type="array" db_ref_id="1">
-      <obj_property name="ElementShortName">PERIOD[31:0]</obj_property>
-      <obj_property name="ObjectShortName">PERIOD[31:0]</obj_property>
-      <obj_property name="Radix">HEXRADIX</obj_property>
-   </wvobject>
    <wvobject fp_name="/mainP_test/uut/rf/Q10" type="array" db_ref_id="1">
       <obj_property name="ElementShortName">Q10[31:0]</obj_property>
       <obj_property name="ObjectShortName">Q10[31:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/mainP_test/uut/rf/Q8" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">Q8[31:0]</obj_property>
+      <obj_property name="ObjectShortName">Q8[31:0]</obj_property>
       <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
    </wvobject>
    <wvobject fp_name="/mainP_test/uut/rf/Q7" type="array" db_ref_id="1">
@@ -77,26 +77,28 @@
       <obj_property name="ElementShortName">Condep</obj_property>
       <obj_property name="ObjectShortName">Condep</obj_property>
    </wvobject>
-   <wvobject fp_name="/mainP_test/uut/eFwdA" type="array" db_ref_id="1">
-      <obj_property name="ElementShortName">eFwdA[1:0]</obj_property>
-      <obj_property name="ObjectShortName">eFwdA[1:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/mainP_test/uut/eFwdB" type="array" db_ref_id="1">
-      <obj_property name="ElementShortName">eFwdB[1:0]</obj_property>
-      <obj_property name="ObjectShortName">eFwdB[1:0]</obj_property>
-   </wvobject>
    <wvobject fp_name="/mainP_test/uut/d" type="array" db_ref_id="1">
       <obj_property name="ElementShortName">d[31:0]</obj_property>
       <obj_property name="ObjectShortName">d[31:0]</obj_property>
-      <obj_property name="Radix">HEXRADIX</obj_property>
    </wvobject>
-   <wvobject fp_name="/mainP_test/uut/malu/R" type="array" db_ref_id="1">
-      <obj_property name="ElementShortName">R[31:0]</obj_property>
-      <obj_property name="ObjectShortName">R[31:0]</obj_property>
-      <obj_property name="Radix">HEXRADIX</obj_property>
+   <wvobject fp_name="/mainP_test/uut/wWreg" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">wWreg</obj_property>
+      <obj_property name="ObjectShortName">wWreg</obj_property>
    </wvobject>
-   <wvobject fp_name="/mainP_test/uut/malu/Z" type="logic" db_ref_id="1">
-      <obj_property name="ElementShortName">Z</obj_property>
-      <obj_property name="ObjectShortName">Z</obj_property>
+   <wvobject fp_name="/mainP_test/uut/wRd" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">wRd[4:0]</obj_property>
+      <obj_property name="ObjectShortName">wRd[4:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/mainP_test/uut/mWmem" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">mWmem</obj_property>
+      <obj_property name="ObjectShortName">mWmem</obj_property>
+   </wvobject>
+   <wvobject fp_name="/mainP_test/uut/dm/Addr" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">Addr[31:0]</obj_property>
+      <obj_property name="ObjectShortName">Addr[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/mainP_test/uut/dm/Din" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">Din[31:0]</obj_property>
+      <obj_property name="ObjectShortName">Din[31:0]</obj_property>
    </wvobject>
 </wave_config>
