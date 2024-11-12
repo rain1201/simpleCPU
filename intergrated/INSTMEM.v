@@ -32,30 +32,30 @@ assign Rom[5'h04]=32'b000000_00100_00010_00101_00000_100010;//sub $5,$4,$2___$5=
 assign Rom[5'h05]=32'b001100_00001_00110_00000_00000_001011;//andi $6,$1,1___$6=10
 assign Rom[5'h06]=32'b001111_00000_01010_10000_11111_000001;//lui $10,103701
 assign Rom[5'h07]=32'b000010_00000_00000_00000_00000_001100;//j 01100____0C
-assign Rom[5'h08]=32'hXXXXXXXX;
-assign Rom[5'h09]=32'hXXXXXXXX;
-assign Rom[5'h0A]=32'hXXXXXXXX; 
-assign Rom[5'h0B]=32'hXXXXXXXX;
+assign Rom[5'h08]=32'h00000000;
+assign Rom[5'h09]=32'h00000000;
+assign Rom[5'h0A]=32'h00000000; 
+assign Rom[5'h0B]=32'h00000000;
 assign Rom[5'h0C]=32'b000100_00001_00010_00000_00000_000100;//beq $1,$2,4___0D
 assign Rom[5'h0D]=32'b000101_00001_00011_00000_00000_000100;// bne $1 $3,4___12
-assign Rom[5'h0E]=32'hXXXXXXXX;
-assign Rom[5'h0F]=32'hXXXXXXXX;
-assign Rom[5'h10]=32'hXXXXXXXX;
-assign Rom[5'h11]=32'hXXXXXXXX;
+assign Rom[5'h0E]=32'h00000000;
+assign Rom[5'h0F]=32'h00000000;
+assign Rom[5'h10]=32'h00000000;
+assign Rom[5'h11]=32'h00000000;
 assign Rom[5'h12]=32'b000000_00101_00110_00111_00000_100000;//add $7,$5,$6___$7=19
 assign Rom[5'h13]=32'b101011_00111_00110_00000_00000_001010;//sw $6,10($7)___memory[$7+10]=$6=10
 assign Rom[5'h14]=32'b100011_00111_01000_00000_00000_001010;//lw $8,10($7)___$8=memory[$7+10]=10
-assign Rom[5'h15]=32'hXXXXXXXX;
-assign Rom[5'h16]=32'hXXXXXXXX;
-assign Rom[5'h17]=32'hXXXXXXXX;
-assign Rom[5'h18]=32'hXXXXXXXX;
-assign Rom[5'h19]=32'hXXXXXXXX;
-assign Rom[5'h1A]=32'hXXXXXXXX;
-assign Rom[5'h1B]=32'hXXXXXXXX;
-assign Rom[5'h1C]=32'hXXXXXXXX;
-assign Rom[5'h1D]=32'hXXXXXXXX;
-assign Rom[5'h1E]=32'hXXXXXXXX;
-assign Rom[5'h1F]=32'hXXXXXXXX;
+assign Rom[5'h15]=32'h00000000;
+assign Rom[5'h16]=32'h00000000;
+assign Rom[5'h17]=32'h00000000;
+assign Rom[5'h18]=32'h00000000;
+assign Rom[5'h19]=32'h00000000;
+assign Rom[5'h1A]=32'h00000000;
+assign Rom[5'h1B]=32'h00000000;
+assign Rom[5'h1C]=32'h00000000;
+assign Rom[5'h1D]=32'h00000000;
+assign Rom[5'h1E]=32'h00000000;
+assign Rom[5'h1F]=32'h00000000;
 assign Inst=Rom[Addr[6:2]];
 
 endmodule

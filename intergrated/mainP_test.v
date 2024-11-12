@@ -33,7 +33,7 @@ module mainP_test;
 		.clk(clk), 
 		.pcrst(pcrst)
 	);
-	   localparam PERIOD = 50; // 20 ns clock period
+	   localparam PERIOD = 30; // 20 ns clock period
 
     // Clock generation
     always begin

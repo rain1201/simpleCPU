@@ -10,7 +10,7 @@
          </top_modules>
       </db_ref>
    </db_ref_list>
-   <WVObjectSize size="17" />
+   <WVObjectSize size="19" />
    <wvobject fp_name="/mainP_test/clk" type="logic" db_ref_id="1">
       <obj_property name="ElementShortName">clk</obj_property>
       <obj_property name="ObjectShortName">clk</obj_property>
@@ -27,6 +27,11 @@
    <wvobject fp_name="/mainP_test/uut/rf/Q10" type="array" db_ref_id="1">
       <obj_property name="ElementShortName">Q10[31:0]</obj_property>
       <obj_property name="ObjectShortName">Q10[31:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/mainP_test/uut/rf/Q7" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">Q7[31:0]</obj_property>
+      <obj_property name="ObjectShortName">Q7[31:0]</obj_property>
       <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
    </wvobject>
    <wvobject fp_name="/mainP_test/uut/rf/Q6" type="array" db_ref_id="1">
@@ -62,7 +67,7 @@
    <wvobject fp_name="/mainP_test/uut/pc/Address" type="array" db_ref_id="1">
       <obj_property name="ElementShortName">Address[31:0]</obj_property>
       <obj_property name="ObjectShortName">Address[31:0]</obj_property>
-      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
    </wvobject>
    <wvobject fp_name="/mainP_test/uut/cu/STALL" type="logic" db_ref_id="1">
       <obj_property name="ElementShortName">STALL</obj_property>
@@ -89,5 +94,9 @@
       <obj_property name="ElementShortName">R[31:0]</obj_property>
       <obj_property name="ObjectShortName">R[31:0]</obj_property>
       <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/mainP_test/uut/malu/Z" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">Z</obj_property>
+      <obj_property name="ObjectShortName">Z</obj_property>
    </wvobject>
 </wave_config>
