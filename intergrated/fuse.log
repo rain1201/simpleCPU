@@ -1,4 +1,4 @@
-Running: /opt/Xilinx/14.7/ISE_DS/ISE/bin/lin64/unwrapped/fuse -relaunch -intstyle "ise" -incremental -lib "unisims_ver" -lib "unimacro_ver" -lib "xilinxcorelib_ver" -lib "secureip" -o "/home/song/simpleCPU/intergrated/main_test_isim_beh.exe" -prj "/home/song/simpleCPU/intergrated/main_test_beh.prj" "work.main_test" "work.glbl" 
+Running: /opt/Xilinx/14.7/ISE_DS/ISE/bin/lin64/unwrapped/fuse -relaunch -intstyle "ise" -incremental -lib "unisims_ver" -lib "unimacro_ver" -lib "xilinxcorelib_ver" -lib "secureip" -o "/home/song/simpleCPU/intergrated/mainPN_test_isim_beh.exe" -prj "/home/song/simpleCPU/intergrated/mainPN_test_beh.prj" "work.mainPN_test" "work.glbl" 
 ISim P.20131013 (signature 0xfbc00daa)
 Number of CPUs detected in this system: 16
 Turning on mult-threading, number of parallel sub-compilation jobs: 32 
@@ -13,22 +13,30 @@ Analyzing Verilog file "/home/song/simpleCPU/intergrated/D_FFEC32.v" into librar
 Analyzing Verilog file "/home/song/simpleCPU/intergrated/CLA_4.v" into library work
 Analyzing Verilog file "/home/song/simpleCPU/intergrated/REG32.v" into library work
 Analyzing Verilog file "/home/song/simpleCPU/intergrated/MUX32X32.v" into library work
+Analyzing Verilog file "/home/song/simpleCPU/intergrated/D_FFEC6.v" into library work
+Analyzing Verilog file "/home/song/simpleCPU/intergrated/D_FFEC5.v" into library work
+Analyzing Verilog file "/home/song/simpleCPU/intergrated/D_FFEC2.v" into library work
 Analyzing Verilog file "/home/song/simpleCPU/intergrated/DEC5T32.v" into library work
 Analyzing Verilog file "/home/song/simpleCPU/intergrated/ADDSUB_32.v" into library work
+Analyzing Verilog file "/home/song/simpleCPU/intergrated/REG_memwb.v" into library work
+Analyzing Verilog file "/home/song/simpleCPU/intergrated/REG_ifid.v" into library work
+Analyzing Verilog file "/home/song/simpleCPU/intergrated/REG_idex.v" into library work
+Analyzing Verilog file "/home/song/simpleCPU/intergrated/REG_EXMEM.v" into library work
 Analyzing Verilog file "/home/song/simpleCPU/intergrated/REGFILE.v" into library work
+Analyzing Verilog file "/home/song/simpleCPU/intergrated/PCCON.v" into library work
 Analyzing Verilog file "/home/song/simpleCPU/intergrated/PC.v" into library work
 Analyzing Verilog file "/home/song/simpleCPU/intergrated/MUX2X5.v" into library work
 Analyzing Verilog file "/home/song/simpleCPU/intergrated/INSTMEM.v" into library work
 Analyzing Verilog file "/home/song/simpleCPU/intergrated/EXT16T32.v" into library work
 Analyzing Verilog file "/home/song/simpleCPU/intergrated/DATAMEM.v" into library work
-Analyzing Verilog file "/home/song/simpleCPU/intergrated/CONUNIT.v" into library work
+Analyzing Verilog file "/home/song/simpleCPU/intergrated/CONUNITPN.v" into library work
 Analyzing Verilog file "/home/song/simpleCPU/intergrated/ALU.v" into library work
-Analyzing Verilog file "/home/song/simpleCPU/intergrated/main.v" into library work
-Analyzing Verilog file "/home/song/simpleCPU/intergrated/main_test.v" into library work
+Analyzing Verilog file "/home/song/simpleCPU/intergrated/mainPN.v" into library work
+Analyzing Verilog file "/home/song/simpleCPU/intergrated/mainPN_test.v" into library work
 Analyzing Verilog file "/opt/Xilinx/14.7/ISE_DS/ISE//verilog/src/glbl.v" into library work
 Starting static elaboration
-WARNING:HDLCompiler:1016 - "/home/song/simpleCPU/intergrated/main.v" Line 47: Port Z is not connected to this instance
-WARNING:HDLCompiler:1016 - "/home/song/simpleCPU/intergrated/main.v" Line 48: Port Z is not connected to this instance
+WARNING:HDLCompiler:1016 - "/home/song/simpleCPU/intergrated/mainPN.v" Line 38: Port Z is not connected to this instance
+WARNING:HDLCompiler:1016 - "/home/song/simpleCPU/intergrated/mainPN.v" Line 64: Port Z is not connected to this instance
 WARNING:HDLCompiler:1016 - "/home/song/simpleCPU/intergrated/REG32.v" Line 30: Port Qn is not connected to this instance
 WARNING:HDLCompiler:1016 - "/home/song/simpleCPU/intergrated/REG32.v" Line 31: Port Qn is not connected to this instance
 WARNING:HDLCompiler:1016 - "/home/song/simpleCPU/intergrated/REG32.v" Line 32: Port Qn is not connected to this instance
@@ -60,36 +68,71 @@ WARNING:HDLCompiler:1016 - "/home/song/simpleCPU/intergrated/REG32.v" Line 57: P
 WARNING:HDLCompiler:1016 - "/home/song/simpleCPU/intergrated/REG32.v" Line 58: Port Qn is not connected to this instance
 WARNING:HDLCompiler:1016 - "/home/song/simpleCPU/intergrated/REG32.v" Line 59: Port Qn is not connected to this instance
 WARNING:HDLCompiler:1016 - "/home/song/simpleCPU/intergrated/REG32.v" Line 60: Port Qn is not connected to this instance
+WARNING:HDLCompiler:1016 - "/home/song/simpleCPU/intergrated/REG_idex.v" Line 36: Port Qn is not connected to this instance
+WARNING:HDLCompiler:1016 - "/home/song/simpleCPU/intergrated/REG_idex.v" Line 37: Port Qn is not connected to this instance
+WARNING:HDLCompiler:1016 - "/home/song/simpleCPU/intergrated/REG_idex.v" Line 38: Port Qn is not connected to this instance
+WARNING:HDLCompiler:1016 - "/home/song/simpleCPU/intergrated/REG_idex.v" Line 39: Port Qn is not connected to this instance
+WARNING:HDLCompiler:1016 - "/home/song/simpleCPU/intergrated/REG_idex.v" Line 40: Port Qn is not connected to this instance
+WARNING:HDLCompiler:1016 - "/home/song/simpleCPU/intergrated/REG_idex.v" Line 41: Port Qn is not connected to this instance
+WARNING:HDLCompiler:1016 - "/home/song/simpleCPU/intergrated/REG_idex.v" Line 42: Port Qn is not connected to this instance
+WARNING:HDLCompiler:1016 - "/home/song/simpleCPU/intergrated/REG_idex.v" Line 43: Port Qn is not connected to this instance
+WARNING:HDLCompiler:1016 - "/home/song/simpleCPU/intergrated/REG_idex.v" Line 44: Port Qn is not connected to this instance
+WARNING:HDLCompiler:1016 - "/home/song/simpleCPU/intergrated/REG_idex.v" Line 45: Port Qn is not connected to this instance
+WARNING:HDLCompiler:1016 - "/home/song/simpleCPU/intergrated/REG_idex.v" Line 46: Port Qn is not connected to this instance
+WARNING:HDLCompiler:1016 - "/home/song/simpleCPU/intergrated/REG_idex.v" Line 47: Port Qn is not connected to this instance
+WARNING:HDLCompiler:1016 - "/home/song/simpleCPU/intergrated/REG_idex.v" Line 48: Port Qn is not connected to this instance
+WARNING:HDLCompiler:1016 - "/home/song/simpleCPU/intergrated/REG_EXMEM.v" Line 35: Port Qn is not connected to this instance
+WARNING:HDLCompiler:1016 - "/home/song/simpleCPU/intergrated/REG_EXMEM.v" Line 36: Port Qn is not connected to this instance
+WARNING:HDLCompiler:1016 - "/home/song/simpleCPU/intergrated/REG_EXMEM.v" Line 37: Port Qn is not connected to this instance
+WARNING:HDLCompiler:1016 - "/home/song/simpleCPU/intergrated/REG_EXMEM.v" Line 38: Port Qn is not connected to this instance
+WARNING:HDLCompiler:1016 - "/home/song/simpleCPU/intergrated/REG_EXMEM.v" Line 39: Port Qn is not connected to this instance
+WARNING:HDLCompiler:1016 - "/home/song/simpleCPU/intergrated/REG_EXMEM.v" Line 40: Port Qn is not connected to this instance
+WARNING:HDLCompiler:1016 - "/home/song/simpleCPU/intergrated/REG_EXMEM.v" Line 41: Port Qn is not connected to this instance
+WARNING:HDLCompiler:1016 - "/home/song/simpleCPU/intergrated/REG_EXMEM.v" Line 42: Port Qn is not connected to this instance
+WARNING:HDLCompiler:1016 - "/home/song/simpleCPU/intergrated/REG_EXMEM.v" Line 43: Port Qn is not connected to this instance
+WARNING:HDLCompiler:1016 - "/home/song/simpleCPU/intergrated/REG_memwb.v" Line 31: Port Qn is not connected to this instance
+WARNING:HDLCompiler:1016 - "/home/song/simpleCPU/intergrated/REG_memwb.v" Line 32: Port Qn is not connected to this instance
+WARNING:HDLCompiler:1016 - "/home/song/simpleCPU/intergrated/REG_memwb.v" Line 33: Port Qn is not connected to this instance
+WARNING:HDLCompiler:1016 - "/home/song/simpleCPU/intergrated/REG_memwb.v" Line 34: Port Qn is not connected to this instance
+WARNING:HDLCompiler:1016 - "/home/song/simpleCPU/intergrated/REG_memwb.v" Line 35: Port Qn is not connected to this instance
 Completed static elaboration
-Fuse Memory Usage: 83152 KB
-Fuse CPU Usage: 860 ms
+Fuse Memory Usage: 83364 KB
+Fuse CPU Usage: 870 ms
+Compiling module PCCON
+Compiling module CLA_4
+Compiling module ADDSUB_32
+Compiling module MUX2X32
+Compiling module ALU
+Compiling module MUX4X32
 Compiling module D_LATCH
 Compiling module D_FF
 Compiling module D_FFEC
 Compiling module D_FFEC32
 Compiling module PC
 Compiling module INSTMEM
-Compiling module CONUNIT
+Compiling module REG_ifid
+Compiling module CONUNITPN
 Compiling module MUX2X5
 Compiling module DEC5T32
 Compiling module REG32
-Compiling module MUX2X32
-Compiling module MUX4X32
 Compiling module MUX16X32
 Compiling module MUX32X32
 Compiling module REGFILE
 Compiling module EXT16T32
-Compiling module CLA_4
-Compiling module ADDSUB_32
-Compiling module ALU
+Compiling module D_FFEC2
+Compiling module D_FFEC5
+Compiling module D_FFEC6
+Compiling module REG_idex
+Compiling module REG_EXMEM
 Compiling module DATAMEM
-Compiling module main
-Compiling module main_test
+Compiling module REG_memwb
+Compiling module mainPN
+Compiling module mainPN_test
 Compiling module glbl
 Time Resolution for simulation is 1ps.
 Waiting for 1 sub-compilation(s) to finish...
-Compiled 23 Verilog Units
-Built simulation executable /home/song/simpleCPU/intergrated/main_test_isim_beh.exe
-Fuse Memory Usage: 2216964 KB
+Compiled 31 Verilog Units
+Built simulation executable /home/song/simpleCPU/intergrated/mainPN_test_isim_beh.exe
+Fuse Memory Usage: 2217020 KB
 Fuse CPU Usage: 890 ms
 GCC CPU Usage: 60 ms
