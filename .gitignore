@@ -70,3 +70,8 @@ _xmsgs/
 isim/
 *.exe
 *.wdb
+xilinxsim.ini
+*.log
+*.cmd
+*.tfi
+fuse.xmsgs
