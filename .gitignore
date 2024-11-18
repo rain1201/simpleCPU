@@ -73,5 +73,4 @@ isim/
 xilinxsim.ini
 *.log
 *.cmd
-*.tfi
 fuse.xmsgs
