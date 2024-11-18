@@ -82,7 +82,7 @@ module CONUNITPN(Op,Func,Z,Regrt,Se,Wreg,Aluqb,Aluc,Wmem,Pcsrc,Reg2reg,Reglui,
 	 or t3(Aluqb,add,sub,andd,orr,beq,bne,j);
 	 or t4(Aluc[1],andd,orr,andi,ori);
 	 or t5(Aluc[0],sub,orr,ori,beq,bne);
-	 or t6(Reg2reg,add,sub,andd,orr,sll,srl,sra,addi,andi,ori,sw,beq,bne,j);
+	 or t6(Reg2reg,add,sub,andd,orr,sll,srl,sra,addi,andi,ori,sw,beq,bne,lui,j);
 	 assign Reglui=lui;
 	 assign Wmem=sw;
 	 assign Pcsrc[0]=j;
