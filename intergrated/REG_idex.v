@@ -20,7 +20,8 @@
 //////////////////////////////////////////////////////////////////////////////////
 module REG_idex(Wreg,Reg2reg,Wmem,Op,Aluc,Aluqb,Pc,R1,R2,I,Rd,FwdA,FwdB,
 					En,Clk,Clrn,
-					eWreg,eReg2reg,eWmem,eOp,eAluc,eAluqb,ePc,eR1,eR2,eI,eRd,eFwdA,eFwdB
+					eWreg,eReg2reg,eWmem,eOp,eAluc,eAluqb,ePc,eR1,eR2,eI,eRd,eFwdA,eFwdB,
+					Sa,sArith,sRight,AnsSel,eSa,esArith,esRight,eAnsSel
     );
 	 input [5:0]Op;
 	 input Wreg,Aluqb,Wmem,Reg2reg; 
@@ -33,6 +34,14 @@ module REG_idex(Wreg,Reg2reg,Wmem,Op,Aluc,Aluqb,Pc,R1,R2,I,Rd,FwdA,FwdB,
 	 output [1:0]eAluc,eFwdA,eFwdB;
 	 output [31:0]ePc,eR1,eR2,eI;
 	 output [4:0]eRd;
+	 
+	 input sArith,sRight;
+	 input[4:0] Sa;
+	 input[1:0] AnsSel;
+	 output esArith,esRight;
+	 output[4:0] eSa;
+	 output[1:0] eAnsSel;
+	 
 	 D_FFEC a1(Wreg,Clk,En,Clrn,eWreg);
 	 D_FFEC a2(Aluqb,Clk,En,Clrn,eAluqb);
 	 D_FFEC a3(Wmem,Clk,En,Clrn,eWmem);
@@ -46,7 +55,9 @@ module REG_idex(Wreg,Reg2reg,Wmem,Op,Aluc,Aluqb,Pc,R1,R2,I,Rd,FwdA,FwdB,
 	 D_FFEC32 e1(R1,Clk,En,Clrn,eR1);
 	 D_FFEC32 e2(R2,Clk,En,Clrn,eR2);
 	 D_FFEC32 e3(I,Clk,En,Clrn,eI);
-
-
-
+	 
+	 D_FFEC ext0(sArith,Clk,En,Clrn,esArith);
+	 D_FFEC ext1(sRight,Clk,En,Clrn,esRight);
+	 D_FFEC2 ext2(AnsSel,Clk,En,Clrn,eAnsSel);
+	 D_FFEC5 ext3(Sa,Clk,En,Clrn,eSa);
 endmodule

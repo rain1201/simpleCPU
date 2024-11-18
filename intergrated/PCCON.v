@@ -26,7 +26,6 @@ module PCCON(Op,eOp,eZ,
 	 output reg [1:0] Pcsrc;
 	 output reg Condep;
 	 always @(Op,eOp,eZ)begin
-		Pcsrc=2'b00;
 		if(((eOp==6'b000100)&(eZ==1'b1))|((eOp==6'b000101)&(eZ==1'b0)))begin
 			Condep=1'b0;
 			Pcsrc=2'b10;
@@ -34,6 +33,8 @@ module PCCON(Op,eOp,eZ,
 			Condep=1'b1;
 			if(Op==6'b000010)begin
 				Pcsrc=2'b11;
+			end else begin
+				Pcsrc=2'b00;
 			end
 		end
 	 end

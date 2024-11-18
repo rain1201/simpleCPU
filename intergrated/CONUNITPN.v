@@ -22,7 +22,8 @@ module CONUNITPN(Op,Func,Z,Regrt,Se,Wreg,Aluqb,Aluc,Wmem,Pcsrc,Reg2reg,Reglui,
 					Rs,Rt,
 					FwdA,FwdB,
 					eReg2reg,eWreg,mWreg,mRd,eRd,eOp,STALL,
-					Condep
+					Condep,
+					sArith,sRight,AnsSel
     );
 	 input [5:0]Op,Func,eOp;
 	 input Z;
@@ -34,9 +35,13 @@ module CONUNITPN(Op,Func,Z,Regrt,Se,Wreg,Aluqb,Aluc,Wmem,Pcsrc,Reg2reg,Reglui,
 	 output [1:0]Aluc;
 	 output reg [1:0]FwdA,FwdB;
 	 output reg STALL,Condep;
+	 
+	 output sArith,sRight;
+	 output[1:0] AnsSel;
+	 
 	 wire[5:0] nOp,nFunc;
 	 wire nZ;
-	 wire Rtype,add,sub,andd,orr,addi,andi,ori,lw,sw,beq,bne,lui,j,pct1,pct2;
+	 wire Rtype,add,sub,andd,orr,addi,andi,ori,lw,sw,beq,bne,lui,j,sll,srl,sra,pct1,pct2;
 	 nor ir(Rtype,Op[5],Op[4],Op[3],Op[2],Op[1],Op[0]);
 	 not o0(nOp[0],Op[0]);
 	 not o1(nOp[1],Op[1]);
@@ -55,6 +60,11 @@ module CONUNITPN(Op,Func,Z,Regrt,Se,Wreg,Aluqb,Aluc,Wmem,Pcsrc,Reg2reg,Reglui,
 	 and r1(sub,Rtype,Func[5],nFunc[4],nFunc[3],nFunc[2],Func[1],nFunc[0]);
 	 and r2(andd,Rtype,Func[5],nFunc[4],nFunc[3],Func[2],nFunc[1],nFunc[0]);
 	 and r3(orr,Rtype,Func[5],nFunc[4],nFunc[3],Func[2],nFunc[1],Func[0]);
+	 
+	 and r4(sll,Rtype,nFunc[5],nFunc[4],nFunc[3],nFunc[2],nFunc[1],nFunc[0]);
+	 and r5(srl,Rtype,nFunc[5],nFunc[4],nFunc[3],nFunc[2],Func[1],nFunc[0]);
+	 and r6(sra,Rtype,nFunc[5],nFunc[4],nFunc[3],nFunc[2],Func[1],Func[0]);
+	 
 	 and i0(addi,nOp[5],nOp[4],Op[3],nOp[2],nOp[1],nOp[0]);
 	 and i1(andi,nOp[5],nOp[4],Op[3],Op[2],nOp[1],nOp[0]);
 	 and i2(ori,nOp[5],nOp[4],Op[3],Op[2],nOp[1],Op[0]);
@@ -62,21 +72,27 @@ module CONUNITPN(Op,Func,Z,Regrt,Se,Wreg,Aluqb,Aluc,Wmem,Pcsrc,Reg2reg,Reglui,
 	 and i4(sw,Op[5],nOp[4],Op[3],nOp[2],Op[1],Op[0]);
 	 and i5(beq,nOp[5],nOp[4],nOp[3],Op[2],nOp[1],nOp[0]);
 	 and i6(bne,nOp[5],nOp[4],nOp[3],Op[2],nOp[1],Op[0]);
+	 
 	 and i7(lui,nOp[5],nOp[4],Op[3],Op[2],Op[1],Op[0]);
+	 
 	 and ij(j,nOp[5],nOp[4],nOp[3],nOp[2],Op[1],nOp[0]);
 	 or t0(Regrt,addi,andi,ori,lw,sw,beq,bne,lui,j);
 	 or t1(Se,addi,lw,sw,beq,bne);
-	 or t2(Wreg,add,sub,andd,orr,addi,andi,ori,lw,lui);
+	 or t2(Wreg,add,sub,andd,orr,sll,srl,sra,addi,andi,ori,lw,lui);
 	 or t3(Aluqb,add,sub,andd,orr,beq,bne,j);
 	 or t4(Aluc[1],andd,orr,andi,ori);
 	 or t5(Aluc[0],sub,orr,ori,beq,bne);
-	 or t6(Reg2reg,add,sub,andd,orr,addi,andi,ori,sw,beq,bne,j);
+	 or t6(Reg2reg,add,sub,andd,orr,sll,srl,sra,addi,andi,ori,sw,beq,bne,j);
 	 assign Reglui=lui;
 	 assign Wmem=sw;
 	 assign Pcsrc[0]=j;
 	 and p1(pct1,beq,Z);
 	 and p2(pct2,bne,nZ);
 	 or p(Pcsrc[1],pct1,pct2,j);
+	 
+	 or a0(AnsSel[0],sll,srl,sra);
+	 assign AnsSel[1]=lui;
+	 
 	 always @(eRd,mRd,eWreg,mWreg,Rs,Rt,addi,andi,ori,sw,beq,bne,eReg2reg,eOp,Z)begin
 		FwdA=2'b00;
 		if((Rs==eRd)&(eWreg==1'b1)&(eRd!=5'b0))begin

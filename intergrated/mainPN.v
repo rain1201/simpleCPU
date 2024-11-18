@@ -34,6 +34,11 @@ module mainPN(clk,pcrst
 	 wire STALL,Condep,oCondep;
 	 wire [5:0]eOp,mOp;
 	 wire [31:0]ePc,eR1,eR2,eI;
+	 
+	 wire sArith,sRight,esArith,esRight;
+	 wire[1:0] AnsSel,eAnsSel;
+	 wire[4:0] eSa;
+	 
 	 PCCON pcc(finst[31:26],eOp,z,Pcsrc,Condep);
 	 ALU pcalu1(fpcnt,32'b100,2'b0,npc0);
 	 MUX4X32 pcs(npc0,0,ePc,{{npc0[31:28]},finst[25:0],{2{1'b0}}},Pcsrc,npcnt);
@@ -56,7 +61,8 @@ module mainPN(clk,pcrst
 					rs,rt,
 					FwdA,FwdB,
 					eReg2reg,eWreg,mWreg,mRd,eRd,eOp,
-					STALL,oCondep
+					STALL,oCondep,
+					sArith,sRight,AnsSel
 	 );
 	 MUX2X5 wrs(rd,rt,Regrt,wr);
 	 REGFILE rf(rs,rt,d,wRd,wWreg,nclk,pcrst,qa,qb);
@@ -66,16 +72,21 @@ module mainPN(clk,pcrst
 	 wire [1:0]eAluc,eFwdA,eFwdB;
 	 REG_idex rie(Wreg,Reg2reg,Wmem,op,Aluc,Aluqb,npc2,qa,qb,extimme,wr,FwdA,FwdB,
 					1'b1,clk,pcrst&STALL&Condep,
-					eWreg,eReg2reg,eWmem,eOp,eAluc,eAluqb,ePc,eR1,eR2,eI,eRd,eFwdA,eFwdB
+					eWreg,eReg2reg,eWmem,eOp,eAluc,eAluqb,ePc,eR1,eR2,eI,eRd,eFwdA,eFwdB,
+					sa,sArith,sRight,AnsSel,eSa,esArith,esRight,eAnsSel
     );
-	 wire[31:0] exx,eyy;
+	 wire[31:0] exx,eyy,sftr,fans;
 	 MUX4X32 xs(eR1,d,mR,,eFwdA,exx);
 	 MUX4X32 ys(eR2,d,mR,,eFwdB,eyy);
 	 MUX2X32 aluys(eI,eyy,eAluqb,aluy);
 	 ALU malu(exx,aluy,eAluc,alur,z);
+	 
+	 SHIFTER_32 sft(eyy,eSa, esArith, esRight,sftr);
+	 MUX4X32 anss(alur,sftr,{{eI[15:0]},{16{1'b0}}},,eAnsSel,fans);
+	 
 	 wire mZ;
 	 wire [31:0]mS;
-	 REG_EXMEM rem(eWreg,eReg2reg,eWmem,eOp,npc2,z,alur,eyy,eRd,
+	 REG_EXMEM rem(eWreg,eReg2reg,eWmem,eOp,npc2,z,fans,eyy,eRd,
 						1'b1,clk,1'b1,
 						mWreg,mReg2reg,mWmem,mOp,mPc,mZ,mR,mS,mRd
     );
