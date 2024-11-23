@@ -95,6 +95,8 @@ module CONUNITPN(Op,Func,Z,Regrt,Se,Wreg,Aluqb,Aluc,Wmem,Pcsrc,Reg2reg,Reglui,
 	 
 	 or a0(AnsSel[0],sll,srl,sra);
 	 assign AnsSel[1]=lui;
+	 assign sArith=sra;
+	 assign sRight=sra|srl;
 	 
 	 always @(eRd,mRd,eWreg,mWreg,Rs,Rt,addi,andi,ori,sw,beq,bne,eReg2reg,eOp,Z)begin
 		FwdA=2'b00;

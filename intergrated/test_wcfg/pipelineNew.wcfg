@@ -3,14 +3,14 @@
    <wave_state>
    </wave_state>
    <db_ref_list>
-      <db_ref path="/home/song/simpleCPU/intergrated/mainPN_test_isim_beh.wdb" id="1" type="auto">
+      <db_ref path="/home/song/simpleCPU/intergrated/mainPN_test_isim_beh1.wdb" id="1" type="auto">
          <top_modules>
             <top_module name="glbl" />
             <top_module name="mainPN_test" />
          </top_modules>
       </db_ref>
    </db_ref_list>
-   <WVObjectSize size="17" />
+   <WVObjectSize size="20" />
    <wvobject fp_name="/mainPN_test/clk" type="logic" db_ref_id="1">
       <obj_property name="ElementShortName">clk</obj_property>
       <obj_property name="ObjectShortName">clk</obj_property>
@@ -23,7 +23,7 @@
    <wvobject fp_name="/mainPN_test/uut/rf/Q9" type="array" db_ref_id="1">
       <obj_property name="ElementShortName">Q9[31:0]</obj_property>
       <obj_property name="ObjectShortName">Q9[31:0]</obj_property>
-      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
    </wvobject>
    <wvobject fp_name="/mainPN_test/uut/rf/Q8" type="array" db_ref_id="1">
       <obj_property name="ElementShortName">Q8[31:0]</obj_property>
@@ -92,5 +92,18 @@
       <obj_property name="ElementShortName">Address[31:0]</obj_property>
       <obj_property name="ObjectShortName">Address[31:0]</obj_property>
       <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/mainPN_test/uut/sftr" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">sftr[31:0]</obj_property>
+      <obj_property name="ObjectShortName">sftr[31:0]</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/mainPN_test/uut/sArith" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">sArith</obj_property>
+      <obj_property name="ObjectShortName">sArith</obj_property>
+   </wvobject>
+   <wvobject fp_name="/mainPN_test/uut/sRight" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">sRight</obj_property>
+      <obj_property name="ObjectShortName">sRight</obj_property>
    </wvobject>
 </wave_config>
