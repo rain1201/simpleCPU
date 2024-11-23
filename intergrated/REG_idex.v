@@ -21,7 +21,8 @@
 module REG_idex(Wreg,Reg2reg,Wmem,Op,Aluc,Aluqb,Pc,R1,R2,I,Rd,FwdA,FwdB,
 					En,Clk,Clrn,
 					eWreg,eReg2reg,eWmem,eOp,eAluc,eAluqb,ePc,eR1,eR2,eI,eRd,eFwdA,eFwdB,
-					Sa,sArith,sRight,AnsSel,eSa,esArith,esRight,eAnsSel
+					Sa,sArith,sRight,AnsSel,eSa,esArith,esRight,eAnsSel,
+					jr,ejr
     );
 	 input [5:0]Op;
 	 input Wreg,Aluqb,Wmem,Reg2reg; 
@@ -35,10 +36,10 @@ module REG_idex(Wreg,Reg2reg,Wmem,Op,Aluc,Aluqb,Pc,R1,R2,I,Rd,FwdA,FwdB,
 	 output [31:0]ePc,eR1,eR2,eI;
 	 output [4:0]eRd;
 	 
-	 input sArith,sRight;
+	 input sArith,sRight,jr;
 	 input[4:0] Sa;
 	 input[1:0] AnsSel;
-	 output esArith,esRight;
+	 output esArith,esRight,ejr;
 	 output[4:0] eSa;
 	 output[1:0] eAnsSel;
 	 
@@ -60,4 +61,5 @@ module REG_idex(Wreg,Reg2reg,Wmem,Op,Aluc,Aluqb,Pc,R1,R2,I,Rd,FwdA,FwdB,
 	 D_FFEC ext1(sRight,Clk,En,Clrn,esRight);
 	 D_FFEC2 ext2(AnsSel,Clk,En,Clrn,eAnsSel);
 	 D_FFEC5 ext3(Sa,Clk,En,Clrn,eSa);
+	 D_FFEC ext4(jr,Clk,En,Clrn,ejr);
 endmodule

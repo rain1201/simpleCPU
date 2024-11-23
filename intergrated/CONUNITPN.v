@@ -23,7 +23,8 @@ module CONUNITPN(Op,Func,Z,Regrt,Se,Wreg,Aluqb,Aluc,Wmem,Pcsrc,Reg2reg,Reglui,
 					FwdA,FwdB,
 					eReg2reg,eWreg,mWreg,mRd,eRd,eOp,STALL,
 					Condep,
-					sArith,sRight,AnsSel
+					sArith,sRight,AnsSel,
+					jr
     );
 	 input [5:0]Op,Func,eOp;
 	 input Z;
@@ -38,6 +39,7 @@ module CONUNITPN(Op,Func,Z,Regrt,Se,Wreg,Aluqb,Aluc,Wmem,Pcsrc,Reg2reg,Reglui,
 	 
 	 output sArith,sRight;
 	 output[1:0] AnsSel;
+	 output jr;
 	 
 	 wire[5:0] nOp,nFunc;
 	 wire nZ;
@@ -64,6 +66,7 @@ module CONUNITPN(Op,Func,Z,Regrt,Se,Wreg,Aluqb,Aluc,Wmem,Pcsrc,Reg2reg,Reglui,
 	 and r4(sll,Rtype,nFunc[5],nFunc[4],nFunc[3],nFunc[2],nFunc[1],nFunc[0]);
 	 and r5(srl,Rtype,nFunc[5],nFunc[4],nFunc[3],nFunc[2],Func[1],nFunc[0]);
 	 and r6(sra,Rtype,nFunc[5],nFunc[4],nFunc[3],nFunc[2],Func[1],Func[0]);
+	 and r7(jr,Rtype,nFunc[5],nFunc[4],Func[3],nFunc[2],nFunc[1],nFunc[0]);
 	 
 	 and i0(addi,nOp[5],nOp[4],Op[3],nOp[2],nOp[1],nOp[0]);
 	 and i1(andi,nOp[5],nOp[4],Op[3],Op[2],nOp[1],nOp[0]);

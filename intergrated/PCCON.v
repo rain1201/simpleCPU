@@ -19,14 +19,14 @@
 //
 //////////////////////////////////////////////////////////////////////////////////
 module PCCON(Op,eOp,eZ,
-				Pcsrc,Condep
+				Pcsrc,Condep,ejr
     );
 	 input[5:0] Op,eOp;
-	 input eZ;
+	 input eZ,ejr;
 	 output reg [1:0] Pcsrc;
 	 output reg Condep;
-	 always @(Op,eOp,eZ)begin
-		if(((eOp==6'b000100)&(eZ==1'b1))|((eOp==6'b000101)&(eZ==1'b0)))begin
+	 always @(Op,eOp,eZ,ejr)begin
+		if(((eOp==6'b000100)&(eZ==1'b1))|((eOp==6'b000101)&(eZ==1'b0))|(ejr==1))begin
 			Condep=1'b0;
 			Pcsrc=2'b10;
 		end else begin
