@@ -18,16 +18,19 @@
 // Additional Comments: 
 //
 //////////////////////////////////////////////////////////////////////////////////
-module CONUNIT(Op,Func,Z,Regrt,Se,Wreg,Aluqb,Aluc,Wmem,Pcsrc,Reg2reg,Reglui
+module CONUNIT(Op,Func,Z,Regrt,Se,Wreg,Aluqb,Aluc,Wmem,Pcsrc,Reg2reg,Reglui,sArith, sRight
     );
 	 input [5:0]Op,Func;
 	 input Z;
-	 output Regrt,Se,Wreg,Aluqb,Wmem,Reg2reg,Reglui; 
+	 output Regrt,Se,Wreg,Aluqb,Wmem,Reglui; 
+	 output [1:0]Reg2reg;
 	 output [1:0]Pcsrc;
 	 output [1:0]Aluc;
+	 output sArith, sRight; 
+	 
 	 wire[5:0] nOp,nFunc;
 	 wire nZ;
-	 wire Rtype,add,sub,andd,orr,addi,andi,ori,lw,sw,beq,bne,lui,j,pct1,pct2;
+	 wire Rtype,add,sub,andd,orr,addi,andi,ori,lw,sw,beq,bne,lui,j,pct1,pct2,sll, srl, sra;
 	 nor ir(Rtype,Op[5],Op[4],Op[3],Op[2],Op[1],Op[0]);
 	 not o0(nOp[0],Op[0]);
 	 not o1(nOp[1],Op[1]);
@@ -55,13 +58,25 @@ module CONUNIT(Op,Func,Z,Regrt,Se,Wreg,Aluqb,Aluc,Wmem,Pcsrc,Reg2reg,Reglui
 	 and i6(bne,nOp[5],nOp[4],nOp[3],Op[2],nOp[1],Op[0]);
 	 and i7(lui,nOp[5],nOp[4],Op[3],Op[2],Op[1],Op[0]);
 	 and ij(j,nOp[5],nOp[4],nOp[3],nOp[2],Op[1],nOp[0]);
+	 and r4(sll,Rtype,nFunc[5],nFunc[4],nFunc[3],nFunc[2],nFunc[1],nFunc[0]);
+    and r5(srl,Rtype,nFunc[5],nFunc[4],nFunc[3],nFunc[2],Func[1],nFunc[0]);
+    and r6(sra,Rtype,nFunc[5],nFunc[4],nFunc[3],nFunc[2],Func[1],Func[0]);
+	 
+	 assign sArith = (sll & 1'b0) | (srl & 1'b0) | (sra & 1'b1);
+    assign sRight = (sll & 1'b0) | (srl & 1'b1) | (sra & 1'b1);
+	 
+	 wire [1:0] reg2reg_wire; 
+    assign reg2reg_wire = (sll | srl | sra)? 2'b10 :
+                           (add | sub | andd | orr | addi | andi | ori | sw | beq | bne | j)? 2'b01 :
+                           (lw)? 2'b00 :
+                           2'b11;
+    assign Reg2reg = reg2reg_wire;
 	 or t0(Regrt,addi,andi,ori,lw,sw,beq,bne,lui,j);
 	 or t1(Se,addi,lw,sw,beq,bne);
 	 or t2(Wreg,add,sub,andd,orr,addi,andi,ori,lw,lui);
 	 or t3(Aluqb,add,sub,andd,orr,beq,bne,j);
 	 or t4(Aluc[1],andd,orr,andi,ori);
 	 or t5(Aluc[0],sub,orr,ori,beq,bne);
-	 or t6(Reg2reg,add,sub,andd,orr,addi,andi,ori,sw,beq,bne,j);
 	 assign Reglui=lui;
 	 assign Wmem=sw;
 	 assign Pcsrc[0]=j;

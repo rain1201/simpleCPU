@@ -3,9 +3,9 @@
 // Company: 
 // Engineer: 
 // 
-// Create Date:    09:57:13 10/01/2024 
+// Create Date:    20:28:52 11/23/2024 
 // Design Name: 
-// Module Name:    main 
+// Module Name:    maintest 
 // Project Name: 
 // Target Devices: 
 // Tool versions: 
@@ -18,18 +18,19 @@
 // Additional Comments: 
 //
 //////////////////////////////////////////////////////////////////////////////////
-module main(clk,pcrst
+module maintest(clk,pcrst
     );
+
 	 input clk,pcrst;
 	 wire[31:0] pcnt,npcnt,npc0,npc2,npc3,inst,d,qa,qb,aluy,extimme,alur,dout,d1;
 	 wire[5:0] op,func;
 	 wire[4:0] rs,rt,rd,sa,wr;
 	 wire[15:0] immediate;
 	 wire[25:0] addr;
-	 wire Regrt,Se,Wreg,Aluqb,Wmem,z,Reglui; 
+	 wire Regrt,Se,Wreg,Aluqb,Wmem,Reg2reg,z,Reglui; 
 	 wire [1:0]Pcsrc,Aluc;
-	 wire [1:0]Reg2reg;
-	 wire sArith, sRight; 
+	 reg sArith,  sRight;
+          
 	 
 	 PC pc(clk,pcrst,1'b1,npcnt,pcnt);
 	 INSTMEM im(pcnt,inst);
@@ -41,7 +42,7 @@ module main(clk,pcrst
 	 assign sa=inst[10:6];
 	 assign immediate=inst[15:0];
 	 assign addr=inst[25:0];
-	 CONUNIT cu(op,func,z,Regrt,Se,Wreg,Aluqb,Aluc,Wmem,Pcsrc,Reg2reg,Reglui,sArith, sRight);
+	 CONUNIT cu(op,func,z,Regrt,Se,Wreg,Aluqb,Aluc,Wmem,Pcsrc,Reg2reg,Reglui);
 	 MUX2X5 wrs(rd,rt,Regrt,wr);
 	 REGFILE rf(rs,rt,d,wr,Wreg,clk,pcrst,qa,qb);
 	 EXT16T32 ey(immediate,Se,extimme);
@@ -50,9 +51,7 @@ module main(clk,pcrst
 	 ALU pcalu1(pcnt,32'b100,2'b0,npc0);
 	 ALU pcalu2(npc0,{{extimme[29:0]},{2{1'b0}}},2'b0,npc2);
 	 DATAMEM dm(alur,qb,clk,Wmem,dout);
-	 SHIFTER_32 shifter(qb, sa, sArith, sRight, shift_result);
-	 
-	 MUX4X32 regds(dout, alur, shift_result, , Reg2reg, d1);
+	 MUX2X32 regds(dout,alur,Reg2reg,d1);
 	 MUX2X32 regl(d1,{{immediate},{16{1'b0}}},Reglui,d);
 	 MUX4X32 pcs(npc0,0,npc2,{{npc0[31:28]},addr,{2{1'b0}}},Pcsrc,npcnt);
 	 

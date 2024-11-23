@@ -45,10 +45,10 @@ assign Rom[5'h11]=32'hXXXXXXXX;
 assign Rom[5'h12]=32'b000000_00101_00110_00111_00000_100000;//add $7,$5,$6___$7=19
 assign Rom[5'h13]=32'b101011_00111_00110_00000_00000_001010;//sw $6,10($7)___memory[$7+10]=$6=10
 assign Rom[5'h14]=32'b100011_00111_01000_00000_00000_001010;//lw $8,10($7)___$8=memory[$7+10]=10
-assign Rom[5'h15]=32'hXXXXXXXX;
-assign Rom[5'h16]=32'hXXXXXXXX;
-assign Rom[5'h17]=32'hXXXXXXXX;
-assign Rom[5'h18]=32'hXXXXXXXX;
+assign Rom[5'h15]=32'b001000_00000_01001_1111111111111010;//addi $9 ,$0,-6.___$9=-6
+assign Rom[5'h16]=32'b000000_00000_01001_01010_01010_000000;//sll $10,$9,10___$10=-98304
+assign Rom[5'h17]=32'b000000_00000_01001_01010_01010_000010;//srl $10,$9,10___$10=63
+assign Rom[5'h18]=32'b000000_00000_01001_01010_01010_000011;//sra $10,$9,10___$10=-1
 assign Rom[5'h19]=32'hXXXXXXXX;
 assign Rom[5'h1A]=32'hXXXXXXXX;
 assign Rom[5'h1B]=32'hXXXXXXXX;

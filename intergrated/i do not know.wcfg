@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="/home/siyou/simpleCPU/intergrated/main_test_isim_beh.wdb" id="1" type="auto">
+         <top_modules>
+            <top_module name="glbl" />
+            <top_module name="main_test" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <WVObjectSize size="46" />
+   <wvobject fp_name="/main_test/clk" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/main_test/pcrst" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">pcrst</obj_property>
+      <obj_property name="ObjectShortName">pcrst</obj_property>
+   </wvobject>
+   <wvobject fp_name="/main_test/uut/im/Inst" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">Inst[31:0]</obj_property>
+      <obj_property name="ObjectShortName">Inst[31:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/main_test/uut/rf/Ra" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">Ra[4:0]</obj_property>
+      <obj_property name="ObjectShortName">Ra[4:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/main_test/uut/rf/Rb" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">Rb[4:0]</obj_property>
+      <obj_property name="ObjectShortName">Rb[4:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/main_test/uut/rf/Qa" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">Qa[31:0]</obj_property>
+      <obj_property name="ObjectShortName">Qa[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/main_test/uut/rf/Qb" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">Qb[31:0]</obj_property>
+      <obj_property name="ObjectShortName">Qb[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/main_test/uut/ey/X" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">X[15:0]</obj_property>
+      <obj_property name="ObjectShortName">X[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/main_test/uut/ey/Y" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">Y[31:0]</obj_property>
+      <obj_property name="ObjectShortName">Y[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/main_test/uut/cu/Op" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">Op[5:0]</obj_property>
+      <obj_property name="ObjectShortName">Op[5:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/main_test/uut/cu/Func" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">Func[5:0]</obj_property>
+      <obj_property name="ObjectShortName">Func[5:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/main_test/uut/cu/Z" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">Z</obj_property>
+      <obj_property name="ObjectShortName">Z</obj_property>
+   </wvobject>
+   <wvobject fp_name="/main_test/uut/cu/Regrt" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">Regrt</obj_property>
+      <obj_property name="ObjectShortName">Regrt</obj_property>
+   </wvobject>
+   <wvobject fp_name="/main_test/uut/cu/Se" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">Se</obj_property>
+      <obj_property name="ObjectShortName">Se</obj_property>
+   </wvobject>
+   <wvobject fp_name="/main_test/uut/cu/Wreg" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">Wreg</obj_property>
+      <obj_property name="ObjectShortName">Wreg</obj_property>
+   </wvobject>
+   <wvobject fp_name="/main_test/uut/cu/Aluqb" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">Aluqb</obj_property>
+      <obj_property name="ObjectShortName">Aluqb</obj_property>
+   </wvobject>
+   <wvobject fp_name="/main_test/uut/cu/Wmem" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">Wmem</obj_property>
+      <obj_property name="ObjectShortName">Wmem</obj_property>
+   </wvobject>
+   <wvobject fp_name="/main_test/uut/cu/Reglui" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">Reglui</obj_property>
+      <obj_property name="ObjectShortName">Reglui</obj_property>
+   </wvobject>
+   <wvobject fp_name="/main_test/uut/cu/Reg2reg" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">Reg2reg[1:0]</obj_property>
+      <obj_property name="ObjectShortName">Reg2reg[1:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/main_test/uut/cu/Pcsrc" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">Pcsrc[1:0]</obj_property>
+      <obj_property name="ObjectShortName">Pcsrc[1:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/main_test/uut/cu/Aluc" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">Aluc[1:0]</obj_property>
+      <obj_property name="ObjectShortName">Aluc[1:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/main_test/uut/cu/sArith" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">sArith</obj_property>
+      <obj_property name="ObjectShortName">sArith</obj_property>
+   </wvobject>
+   <wvobject fp_name="/main_test/uut/cu/sRight" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">sRight</obj_property>
+      <obj_property name="ObjectShortName">sRight</obj_property>
+   </wvobject>
+   <wvobject fp_name="/main_test/uut/cu/nOp" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">nOp[5:0]</obj_property>
+      <obj_property name="ObjectShortName">nOp[5:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/main_test/uut/cu/nFunc" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">nFunc[5:0]</obj_property>
+      <obj_property name="ObjectShortName">nFunc[5:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/main_test/uut/cu/nZ" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">nZ</obj_property>
+      <obj_property name="ObjectShortName">nZ</obj_property>
+   </wvobject>
+   <wvobject fp_name="/main_test/uut/cu/Rtype" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">Rtype</obj_property>
+      <obj_property name="ObjectShortName">Rtype</obj_property>
+   </wvobject>
+   <wvobject fp_name="/main_test/uut/cu/add" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">add</obj_property>
+      <obj_property name="ObjectShortName">add</obj_property>
+   </wvobject>
+   <wvobject fp_name="/main_test/uut/cu/sub" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">sub</obj_property>
+      <obj_property name="ObjectShortName">sub</obj_property>
+   </wvobject>
+   <wvobject fp_name="/main_test/uut/cu/andd" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">andd</obj_property>
+      <obj_property name="ObjectShortName">andd</obj_property>
+   </wvobject>
+   <wvobject fp_name="/main_test/uut/cu/orr" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">orr</obj_property>
+      <obj_property name="ObjectShortName">orr</obj_property>
+   </wvobject>
+   <wvobject fp_name="/main_test/uut/cu/addi" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">addi</obj_property>
+      <obj_property name="ObjectShortName">addi</obj_property>
+   </wvobject>
+   <wvobject fp_name="/main_test/uut/cu/andi" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">andi</obj_property>
+      <obj_property name="ObjectShortName">andi</obj_property>
+   </wvobject>
+   <wvobject fp_name="/main_test/uut/cu/ori" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">ori</obj_property>
+      <obj_property name="ObjectShortName">ori</obj_property>
+   </wvobject>
+   <wvobject fp_name="/main_test/uut/cu/lw" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">lw</obj_property>
+      <obj_property name="ObjectShortName">lw</obj_property>
+   </wvobject>
+   <wvobject fp_name="/main_test/uut/cu/sw" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">sw</obj_property>
+      <obj_property name="ObjectShortName">sw</obj_property>
+   </wvobject>
+   <wvobject fp_name="/main_test/uut/cu/beq" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">beq</obj_property>
+      <obj_property name="ObjectShortName">beq</obj_property>
+   </wvobject>
+   <wvobject fp_name="/main_test/uut/cu/bne" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">bne</obj_property>
+      <obj_property name="ObjectShortName">bne</obj_property>
+   </wvobject>
+   <wvobject fp_name="/main_test/uut/cu/lui" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">lui</obj_property>
+      <obj_property name="ObjectShortName">lui</obj_property>
+   </wvobject>
+   <wvobject fp_name="/main_test/uut/cu/j" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">j</obj_property>
+      <obj_property name="ObjectShortName">j</obj_property>
+   </wvobject>
+   <wvobject fp_name="/main_test/uut/cu/pct1" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">pct1</obj_property>
+      <obj_property name="ObjectShortName">pct1</obj_property>
+   </wvobject>
+   <wvobject fp_name="/main_test/uut/cu/pct2" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">pct2</obj_property>
+      <obj_property name="ObjectShortName">pct2</obj_property>
+   </wvobject>
+   <wvobject fp_name="/main_test/uut/cu/sll" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">sll</obj_property>
+      <obj_property name="ObjectShortName">sll</obj_property>
+   </wvobject>
+   <wvobject fp_name="/main_test/uut/cu/srl" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">srl</obj_property>
+      <obj_property name="ObjectShortName">srl</obj_property>
+   </wvobject>
+   <wvobject fp_name="/main_test/uut/cu/sra" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">sra</obj_property>
+      <obj_property name="ObjectShortName">sra</obj_property>
+   </wvobject>
+   <wvobject fp_name="/main_test/uut/cu/reg2reg_wire" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">reg2reg_wire[1:0]</obj_property>
+      <obj_property name="ObjectShortName">reg2reg_wire[1:0]</obj_property>
+   </wvobject>
+</wave_config>
