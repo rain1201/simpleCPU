@@ -73,7 +73,7 @@ module CONUNIT(Op,Func,Z,Regrt,Se,Wreg,Aluqb,Aluc,Wmem,Pcsrc,Reg2reg,Reglui,sAri
     assign Reg2reg = reg2reg_wire;
 	 or t0(Regrt,addi,andi,ori,lw,sw,beq,bne,lui,j);
 	 or t1(Se,addi,lw,sw,beq,bne);
-	 or t2(Wreg,add,sub,andd,orr,addi,andi,ori,lw,lui);
+	 or t2(Wreg,add,sub,andd,orr,addi,andi,ori,lw,lui,sll,srl,sra);
 	 or t3(Aluqb,add,sub,andd,orr,beq,bne,j);
 	 or t4(Aluc[1],andd,orr,andi,ori);
 	 or t5(Aluc[0],sub,orr,ori,beq,bne);

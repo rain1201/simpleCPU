@@ -72,9 +72,11 @@
    <wvobject fp_name="/main_test/uut/rf/Q9" type="array" db_ref_id="1">
       <obj_property name="ElementShortName">Q9[31:0]</obj_property>
       <obj_property name="ObjectShortName">Q9[31:0]</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
    </wvobject>
    <wvobject fp_name="/main_test/uut/rf/Q10" type="array" db_ref_id="1">
       <obj_property name="ElementShortName">Q10[31:0]</obj_property>
       <obj_property name="ObjectShortName">Q10[31:0]</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
    </wvobject>
 </wave_config>

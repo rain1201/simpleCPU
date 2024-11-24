@@ -21,7 +21,7 @@
 module main(clk,pcrst
     );
 	 input clk,pcrst;
-	 wire[31:0] pcnt,npcnt,npc0,npc2,npc3,inst,d,qa,qb,aluy,extimme,alur,dout,d1;
+	 wire[31:0] pcnt,npcnt,npc0,npc2,npc3,inst,d,qa,qb,aluy,extimme,alur,dout,d1,shift_result;
 	 wire[5:0] op,func;
 	 wire[4:0] rs,rt,rd,sa,wr;
 	 wire[15:0] immediate;

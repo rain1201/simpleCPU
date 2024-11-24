@@ -4,7 +4,7 @@
 // Company: 
 // Engineer:
 //
-// Create Date:   23:08:04 10/28/2024
+// Create Date:   11:22:52 11/24/2024
 // Design Name:   main
 // Module Name:   /home/song/simpleCPU/intergrated/main_test.v
 // Project Name:  intergrated
@@ -33,8 +33,34 @@ module main_test;
 		.clk(clk), 
 		.pcrst(pcrst)
 	);
+
+	initial begin
+		// Initialize Inputs
+		clk = 0;
+		pcrst = 0;
+
+		// Wait 100 ns for global reset to finish
+		#100;
+        
+		// Add stimulus here
+
+	end
+      
+endmodule
+
+module main_test;
+
+	// Inputs
+	reg clk;
+	reg pcrst;
+
+	// Instantiate the Unit Under Test (UUT)
+	main uut (
+		.clk(clk), 
+		.pcrst(pcrst)
+	);
 	// Clock period definitions
-   localparam PERIOD = 50; // 20 ns clock period
+   localparam PERIOD = 20; // 20 ns clock period
 
     // Clock generation
     always begin
