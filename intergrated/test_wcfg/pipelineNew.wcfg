@@ -3,14 +3,14 @@
    <wave_state>
    </wave_state>
    <db_ref_list>
-      <db_ref path="/home/song/simpleCPU/intergrated/mainPN_test_isim_beh1.wdb" id="1" type="auto">
+      <db_ref path="/home/song/simpleCPU/intergrated/mainPN_test_isim_beh.wdb" id="1" type="auto">
          <top_modules>
             <top_module name="glbl" />
             <top_module name="mainPN_test" />
          </top_modules>
       </db_ref>
    </db_ref_list>
-   <WVObjectSize size="20" />
+   <WVObjectSize size="12" />
    <wvobject fp_name="/mainPN_test/clk" type="logic" db_ref_id="1">
       <obj_property name="ElementShortName">clk</obj_property>
       <obj_property name="ObjectShortName">clk</obj_property>
@@ -18,7 +18,7 @@
    <wvobject fp_name="/mainPN_test/uut/rf/Q10" type="array" db_ref_id="1">
       <obj_property name="ElementShortName">Q10[31:0]</obj_property>
       <obj_property name="ObjectShortName">Q10[31:0]</obj_property>
-      <obj_property name="Radix">BINARYRADIX</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
    </wvobject>
    <wvobject fp_name="/mainPN_test/uut/rf/Q9" type="array" db_ref_id="1">
       <obj_property name="ElementShortName">Q9[31:0]</obj_property>
@@ -65,45 +65,9 @@
       <obj_property name="ObjectShortName">Q1[31:0]</obj_property>
       <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
    </wvobject>
-   <wvobject fp_name="/mainPN_test/uut/pcc/Pcsrc" type="array" db_ref_id="1">
-      <obj_property name="ElementShortName">Pcsrc[1:0]</obj_property>
-      <obj_property name="ObjectShortName">Pcsrc[1:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/mainPN_test/uut/pcc/Condep" type="logic" db_ref_id="1">
-      <obj_property name="ElementShortName">Condep</obj_property>
-      <obj_property name="ObjectShortName">Condep</obj_property>
-   </wvobject>
-   <wvobject fp_name="/mainPN_test/uut/pcs/A0" type="array" db_ref_id="1">
-      <obj_property name="ElementShortName">A0[31:0]</obj_property>
-      <obj_property name="ObjectShortName">A0[31:0]</obj_property>
-      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
-   </wvobject>
-   <wvobject fp_name="/mainPN_test/uut/pcs/A2" type="array" db_ref_id="1">
-      <obj_property name="ElementShortName">A2[31:0]</obj_property>
-      <obj_property name="ObjectShortName">A2[31:0]</obj_property>
-      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
-   </wvobject>
-   <wvobject fp_name="/mainPN_test/uut/pcs/A3" type="array" db_ref_id="1">
-      <obj_property name="ElementShortName">A3[31:0]</obj_property>
-      <obj_property name="ObjectShortName">A3[31:0]</obj_property>
-      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
-   </wvobject>
    <wvobject fp_name="/mainPN_test/uut/pc/Address" type="array" db_ref_id="1">
       <obj_property name="ElementShortName">Address[31:0]</obj_property>
       <obj_property name="ObjectShortName">Address[31:0]</obj_property>
       <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
-   </wvobject>
-   <wvobject fp_name="/mainPN_test/uut/sftr" type="array" db_ref_id="1">
-      <obj_property name="ElementShortName">sftr[31:0]</obj_property>
-      <obj_property name="ObjectShortName">sftr[31:0]</obj_property>
-      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
-   </wvobject>
-   <wvobject fp_name="/mainPN_test/uut/sArith" type="logic" db_ref_id="1">
-      <obj_property name="ElementShortName">sArith</obj_property>
-      <obj_property name="ObjectShortName">sArith</obj_property>
-   </wvobject>
-   <wvobject fp_name="/mainPN_test/uut/sRight" type="logic" db_ref_id="1">
-      <obj_property name="ElementShortName">sRight</obj_property>
-      <obj_property name="ObjectShortName">sRight</obj_property>
    </wvobject>
 </wave_config>

@@ -34,7 +34,7 @@ module mainPN_test;
 		.pcrst(pcrst)
 	);
 
-	   localparam PERIOD = 30; // 20 ns clock period
+	   localparam PERIOD = 20; // 20 ns clock period
 
     // Clock generation
     always begin
