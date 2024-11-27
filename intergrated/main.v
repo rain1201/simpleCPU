@@ -54,6 +54,6 @@ module main(clk,pcrst
 	 
 	 MUX4X32 regds(dout, alur, shift_result, , Reg2reg, d1);
 	 MUX2X32 regl(d1,{{immediate},{16{1'b0}}},Reglui,d);
-	 MUX4X32 pcs(npc0,0,npc2,{{npc0[31:28]},addr,{2{1'b0}}},Pcsrc,npcnt);
+	 MUX4X32 pcs(npc0,qa,npc2,{{npc0[31:28]},addr,{2{1'b0}}},Pcsrc,npcnt);
 	 
 endmodule

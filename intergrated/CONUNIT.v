@@ -61,6 +61,7 @@ module CONUNIT(Op,Func,Z,Regrt,Se,Wreg,Aluqb,Aluc,Wmem,Pcsrc,Reg2reg,Reglui,sAri
 	 and r4(sll,Rtype,nFunc[5],nFunc[4],nFunc[3],nFunc[2],nFunc[1],nFunc[0]);
     and r5(srl,Rtype,nFunc[5],nFunc[4],nFunc[3],nFunc[2],Func[1],nFunc[0]);
     and r6(sra,Rtype,nFunc[5],nFunc[4],nFunc[3],nFunc[2],Func[1],Func[0]);
+	 and r7(jr,Rtype,nFunc[5],nFunc[4],Func[3],nFunc[2],nFunc[1],nFunc[0]);
 	 
 	 assign sArith = (sll & 1'b0) | (srl & 1'b0) | (sra & 1'b1);
     assign sRight = (sll & 1'b0) | (srl & 1'b1) | (sra & 1'b1);
@@ -71,6 +72,7 @@ module CONUNIT(Op,Func,Z,Regrt,Se,Wreg,Aluqb,Aluc,Wmem,Pcsrc,Reg2reg,Reglui,sAri
                            (lw)? 2'b00 :
                            2'b11;
     assign Reg2reg = reg2reg_wire;
+	 
 	 or t0(Regrt,addi,andi,ori,lw,sw,beq,bne,lui,j);
 	 or t1(Se,addi,lw,sw,beq,bne);
 	 or t2(Wreg,add,sub,andd,orr,addi,andi,ori,lw,lui,sll,srl,sra);
@@ -79,8 +81,8 @@ module CONUNIT(Op,Func,Z,Regrt,Se,Wreg,Aluqb,Aluc,Wmem,Pcsrc,Reg2reg,Reglui,sAri
 	 or t5(Aluc[0],sub,orr,ori,beq,bne);
 	 assign Reglui=lui;
 	 assign Wmem=sw;
-	 assign Pcsrc[0]=j;
 	 and p1(pct1,beq,Z);
 	 and p2(pct2,bne,nZ);
-	 or p(Pcsrc[1],pct1,pct2,j);
+	 or p3(Pcsrc[1],pct1,pct2,j);
+    or p4(Pcsrc[0],j,jr);
 endmodule
