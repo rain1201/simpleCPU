@@ -159,7 +159,7 @@ CPU能够正确处理分支指令的条件依赖，确保流水线的正确执�
 
 ## 许可证 📜
 
-本项目采用LGPL（GNU Lesser General Public License）许可证。详细信息请参阅[LICENSE](LICENSE)文件。
+本项目采用LGPL许可证。详细信息请参阅[LICENSE](LICENSE)文件。
 
 
 
