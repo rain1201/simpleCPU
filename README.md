@@ -1,17 +1,16 @@
-# SimpleCPU Project 🖥️
+# SimpleCPU 🖥️
 
 ## 项目简介 🚀
 
-本项目是USETC（University of Science and Technology of China）计算机组成与结构课程的课程项目，通过硬件描述语言（HDL）实现了一个基本的CPU架构。
+本项目是 `USETC` 计算机组成与结构课程的课程项目，实现了一个基本的CPU架构。
 
 ## 项目特点 ✨
 
 - **简单易懂的CPU设计**：本项目实现了一个简单的CPU架构，适合初学者学习计算机组成原理。
-- **流水线支持**：项目支持基本的流水线功能，包括数据转发（Forwarding）和流水线暂停（Stalling）机制。
+- **流水线支持**：项目支持基本的流水线功能，包括数据转发和流水线暂停机制。
 - **丰富的指令集**：支持多种指令，包括算术运算、逻辑运算、分支跳转、内存访问等。
 
 
----
 
 ## 项目文件组成 📂
 
@@ -38,6 +37,9 @@ intergrated/
 │   ├── D_LATCH.v       # D锁存器模块
 │   ├── EXT16T32.v      # 16位到32位符号扩展模块
 │   ├── INSTMEM.v       # 指令存储器模块
+│   ├── mainPN.v        # CPU流水线顶层模块
+│   ├── mainP.v         # CPU流水线顶层模块
+│   ├── main.v          # CPU单周期顶层模块
 │   ├── MUX2X32.v       # 2选1多路选择器模块，32位
 │   ├── MUX2X5.v        # 2选1多路选择器模块，5位
 │   ├── MUX4X32.v       # 4选1多路选择器模块，32位
@@ -69,18 +71,20 @@ intergrated/
 │   ├── MUX2X5_test.v   # 2选1多路选择器模块的测试文件
 │   ├── MUX4X32_test.v  # 4选1多路选择器模块的测试文件
 ├── test_wcfg/          # 波形配置文件目录
-│   ├── pipelineNew.wcfg # 流水线CPU的波形配置文件
-│   ├── pipeline.wcfg    # 流水线CPU的波形配置文件
-│   ├── singleCircle.wcfg # 单周期CPU的波形配置文件
-│   ├── i do not know.wcfg # 未知波形配置文件
-│   └── important.wcfg    # 重要波形配置文件
-├── LICENSE             # LGPL许可证文件
-└── README.md           # 项目说明文件
+    ├── pipelineNew.wcfg # 流水线CPU的波形配置文件
+    ├── pipeline.wcfg    # 流水线CPU的波形配置文件
+    ├── singleCircle.wcfg # 单周期CPU的波形配置文件
+    ├── i do not know.wcfg
+    └── important.wcfg
 ```
 
-指令集支持 📜
+> `P`与`PN`后缀均代表流水线，`PN`使用类似RISCV实现方式，更为简洁易懂。
 
-CPU支持的指令集包括以下类型：
+
+
+## 指令集支持 📜
+
+CPU实现了部分MIPS32指令，支持的指令集包括以下类型：
 
 ### 算术与逻辑指令 🧮
 - **ADD**：加法运算
@@ -107,7 +111,7 @@ CPU支持的指令集包括以下类型：
 - **J**：无条件跳转
 - **JR**：寄存器跳转
 
----
+
 
 ## 流水线功能 ⚙️
 
@@ -128,14 +132,14 @@ CPU采用经典的5级流水线结构，包括：
 ### 条件依赖处理 🛠️
 CPU能够正确处理分支指令的条件依赖，确保流水线的正确执行。
 
----
+
 
 ## 开发环境 🛠️
 
 - **开发工具**：Xilinx ISE
 - **硬件描述语言**：Verilog HDL
 
----
+
 
 ## 使用方法 🛠️
 
@@ -148,19 +152,16 @@ CPU能够正确处理分支指令的条件依赖，确保流水线的正确执�
 
 3. **编译与仿真**：
    - 在Xilinx ISE中编译项目。
-   - 使用提供的测试文件`cpu_tb.v`进行仿真，验证CPU功能。
+   - 使用提供的测试文件`main_test.v`进行仿真，验证CPU功能。
 
-4. **修改与扩展**：
-   - 可以根据需要修改`src/`目录下的模块，扩展CPU功能。
-   - 参考`docs/instructions.md`中的指令集文档，添加新的指令支持。
 
----
+
 
 ## 许可证 📜
 
 本项目采用LGPL（GNU Lesser General Public License）许可证。详细信息请参阅[LICENSE](LICENSE)文件。
 
----
+
 
 ## 贡献 🤝
 
